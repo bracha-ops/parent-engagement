@@ -489,6 +489,13 @@
 
   <div class="tools-grid">
 
+    <!-- Card 8 -->
+    <div class="tool-card c-about" onclick="openModal('about')">
+      <div class="card-icon-wrap">❤️</div>
+      <div class="card-title" data-i18n="card.about.title">כמה מילים ממני</div>
+      <div class="card-arrow">→</div>
+    </div>
+
     <!-- Card 1 -->
     <div class="tool-card c-info" onclick="openModal('info')">
       <div class="card-icon-wrap">🤔</div>
@@ -545,13 +552,6 @@
       <div class="card-arrow">→</div>
     </div>
 
-    <!-- Card 8 -->
-    <div class="tool-card c-about" onclick="openModal('about')">
-      <div class="card-icon-wrap">❤️</div>
-      <div class="card-title" data-i18n="card.about.title">כמה מילים ממני</div>
-      <div class="card-arrow">→</div>
-    </div>
-
   </div>
 </main>
 
@@ -581,7 +581,8 @@
         <span style="display:block; font-size:11px; margin-top:6px; color:var(--text-muted); direction:ltr; text-align:right;" class="notranslate">(King et al., 2019, 2014)</span>
       </div>
 
-      <div style="font-size:12px; color:var(--danger); font-weight:700; margin-bottom:16px;" data-i18n="modal.info.warning">⚠️ אנא אל תזיני שמות או פרטים מזהים</div>
+      <div style="font-size:12px; color:var(--danger); font-weight:700; margin-bottom:8px;" data-i18n="modal.info.warning">⚠️ אנא אל תזיני שמות או פרטים מזהים</div>
+      <div style="font-size:12px; color:var(--danger); font-weight:600; margin-bottom:16px;" data-i18n="modal.info.clinicalNote">זכרי שבכל מקרה יש להפעיל חשיבה קלינית</div>
 
       <!-- פן רגשי -->
       <div class="acc-panel">
@@ -819,6 +820,8 @@
       <span style="display:block; font-size:11px; margin-top:6px; color:var(--text-muted); direction:ltr; text-align:right;" class="notranslate">(D'Arrigo et al., 2017; D'Arrigo et al., 2020)</span>
       </div>
 
+      <div style="font-size:12px; color:var(--danger); font-weight:600; margin-bottom:16px;" data-i18n="modal.info.clinicalNote">זכרי שבכל מקרה יש להפעיל חשיבה קלינית</div>
+
       <div class="field-group">
         <label class="field-label" data-i18n="strategy.modeLabel">האם האסטרטגיות שתסמני הן:</label>
         <div style="display:flex; gap:16px; flex-wrap:wrap;">
@@ -901,6 +904,8 @@
     </div>
     <div class="sheet-body">
       <div class="info-banner" data-i18n="modal.reflection.banner">סמני את הנושאים והשאלות ששילבת בשיח עם ההורים (ניתן להוסיף פירוט לכל סעיף), והמערכת תיתן לך משוב המאיר נקודות עיוורות וכיוונים להמשך.</div>
+
+      <div style="font-size:12px; color:var(--danger); font-weight:600; margin-bottom:16px;" data-i18n="modal.info.clinicalNote">זכרי שבכל מקרה יש להפעיל חשיבה קלינית</div>
 
       <div class="cl-item" onclick="toggleCheckbox(this)"><input type="checkbox"><label data-i18n="cl.refl1">האם יצרתי תיאום ציפיות לגבי מידת ואופן המעורבות בטיפול?</label></div>
       <div class="cl-item" onclick="toggleCheckbox(this)"><input type="checkbox"><label data-i18n="cl.refl2">האם ביררתי איזה תפקיד ההורה היה רוצה לקחת בתהליך?</label></div>
@@ -1080,7 +1085,7 @@
         </h4>
         <p style="font-size: 14px; margin-bottom: 16px; color: var(--text-main);" data-i18n-html="about.contactBody">
           יש לך רעיון, מחשבה, שאלה או הצעה לשיפור?<br>
-          אשמח מאוד אם תכתבי לי.
+          מוזמנת לכתוב לי.
         </p>
         <a href="mailto:bracha1994grinfield@gmail.com" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--accent); text-decoration: none; background: rgba(255,255,255,0.7); padding: 8px 16px; border-radius: 8px; transition: all 0.2s;" onmouseover="this.style.background='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.7)'">
           ✉️ bracha1994grinfield@gmail.com
@@ -1581,7 +1586,8 @@ translations.en = {
   "impl.insightLabel": "Insight:",
   "impl.ease.otherPlaceholder": "Additional ideas to ease implementation (optional)...",
   "impl.easeOtherLabel": "Additional ideas:",
-  "video5.title": "The Key to Parental Engagement"
+  "video5.title": "The Key to Parental Engagement",
+  "modal.info.clinicalNote": "Remember that clinical judgment should always be applied"
 };
 
 translations.fr = {
@@ -1901,7 +1907,8 @@ translations.fr = {
   "impl.insightLabel": "Réflexion :",
   "impl.ease.otherPlaceholder": "Idées supplémentaires pour faciliter l'application (optionnel)...",
   "impl.easeOtherLabel": "Idées supplémentaires :",
-  "video5.title": "La clé de l'engagement parental"
+  "video5.title": "La clé de l'engagement parental",
+  "modal.info.clinicalNote": "N'oubliez pas d'exercer votre jugement clinique en toutes circonstances"
 };
 
 translations.ru = {
@@ -2221,7 +2228,8 @@ translations.ru = {
   "impl.insightLabel": "Мысль:",
   "impl.ease.otherPlaceholder": "Дополнительные идеи для облегчения выполнения (по желанию)...",
   "impl.easeOtherLabel": "Дополнительные идеи:",
-  "video5.title": "Ключ к вовлечённости родителей"
+  "video5.title": "Ключ к вовлечённости родителей",
+  "modal.info.clinicalNote": "Помните, что клиническое суждение следует применять в любом случае"
 };
 
 translations.ar = {
@@ -2541,7 +2549,8 @@ translations.ar = {
   "impl.insightLabel": "تأمل:",
   "impl.ease.otherPlaceholder": "أفكار إضافية لتسهيل التطبيق (اختياري)...",
   "impl.easeOtherLabel": "أفكار إضافية:",
-  "video5.title": "مفتاح مشاركة الوالدين"
+  "video5.title": "مفتاح مشاركة الوالدين",
+  "modal.info.clinicalNote": "تذكري أنه يجب دائمًا تفعيل التفكير الإكلينيكي"
 };
 
 translations.yi = {
@@ -2861,7 +2870,8 @@ translations.yi = {
   "impl.insightLabel": "תובֿנה:",
   "impl.ease.otherPlaceholder": "נאָך געדאַנקען צו פֿאַרגרינגערן די אויספֿירונג (אַרויסגעוויילט)...",
   "impl.easeOtherLabel": "נאָך געדאַנקען:",
-  "video5.title": "דער שליסל צו עלטערן־באַטייליקונג"
+  "video5.title": "דער שליסל צו עלטערן־באַטייליקונג",
+  "modal.info.clinicalNote": "געדענק אַז אין יעדן פֿאַל דאַרף מען אָנווענדן קלינישן טראַכטן"
 };
 
 translations.am = {
@@ -3181,7 +3191,8 @@ translations.am = {
   "impl.insightLabel": "ግንዛቤ:",
   "impl.ease.otherPlaceholder": "ተግባራዊነትን ለማቅለል ተጨማሪ ሃሳቦች (አማራጭ)...",
   "impl.easeOtherLabel": "ተጨማሪ ሃሳቦች:",
-  "video5.title": "የወላጅ ተሳትፎ ቁልፍ"
+  "video5.title": "የወላጅ ተሳትፎ ቁልፍ",
+  "modal.info.clinicalNote": "በማንኛውም ሁኔታ ክሊኒካዊ አስተሳሰብን መጠቀም እንዳለብዎት ያስታውሱ"
 };
 
 function getTargetLanguageName() {
