@@ -476,8 +476,8 @@
   </div>
 
   <div class="hero-quote">
-    <span data-i18n="hero.quote">מעורבות הורים תורמת להצלחת הטיפול, לשיפור תפקוד הילד ולהטמעת ההמלצות בחיי היומיום.</span>
-    <span class="notranslate" dir="ltr" style="display: block; font-size: 11.5px; opacity: 0.8; margin-top: 6px; font-weight: 400;">(Case-Smith, 2015; Burney et al., 2024)</span>
+    <span id="heroQuoteText" data-i18n="hero.quote1">מעורבות הורים תורמת להצלחת הטיפול, לשיפור תפקוד הילד ולהטמעת ההמלצות בחיי היומיום.</span>
+    <span id="heroQuoteCite" class="notranslate" dir="ltr" style="display: block; font-size: 11.5px; opacity: 0.8; margin-top: 6px; font-weight: 400;">(Case-Smith, 2015; Burney et al., 2024)</span>
   </div>
 </header>
 
@@ -499,7 +499,7 @@
     <!-- Card 1 -->
     <div class="tool-card c-info" onclick="openModal('info')">
       <div class="card-icon-wrap">🤔</div>
-      <div class="card-title" data-i18n="card.info.title">איך ההורה מעורב בטיפול?</div>
+      <div class="card-title" data-i18n="card.info.title">זיהוי מעורבות ההורה</div>
       <div class="card-subtitle" data-i18n="card.info.subtitle">זהי את רמת המעורבות וקבלי כיוון להמשך.</div>
       <div class="card-arrow">→</div>
     </div>
@@ -512,11 +512,11 @@
       <div class="card-arrow">→</div>
     </div>
 
-    <!-- Card 2 -->
-    <div class="tool-card c-routine" onclick="openModal('routine')">
-      <div class="card-icon-wrap">🏡</div>
-      <div class="card-title" data-i18n="card.routine.title">איך נגדיל את הסיכוי ליישום?</div>
-      <div class="card-subtitle" data-i18n="card.routine.subtitle">התאמת ההדרכה למשפחה</div>
+    <!-- Card 5 -->
+    <div class="tool-card c-reflect" onclick="openModal('reflection')">
+      <div class="card-icon-wrap">🗣️</div>
+      <div class="card-title" data-i18n="card.reflection.title">איך בונים שותפות עם ההורה?</div>
+      <div class="card-subtitle" data-i18n="card.reflection.subtitle">שאלות לרפלקציה</div>
       <div class="card-arrow">→</div>
     </div>
 
@@ -528,19 +528,11 @@
       <div class="card-arrow">→</div>
     </div>
 
-    <!-- Card 5 -->
-    <div class="tool-card c-reflect" onclick="openModal('reflection')">
-      <div class="card-icon-wrap">🗣️</div>
-      <div class="card-title" data-i18n="card.reflection.title">איך בונים שותפות עם ההורה?</div>
-      <div class="card-subtitle" data-i18n="card.reflection.subtitle">שאלות לרפלקציה</div>
-      <div class="card-arrow">→</div>
-    </div>
-
-    <!-- Card 6 -->
-    <div class="tool-card c-video" onclick="openModal('videos')">
-      <div class="card-icon-wrap">📹</div>
-      <div class="card-title" data-i18n="card.videos.title">לומדים ב־5 דקות</div>
-      <div class="card-subtitle" data-i18n="card.videos.subtitle">סרטונים להעמקה</div>
+    <!-- Card 2 -->
+    <div class="tool-card c-routine" onclick="openModal('routine')">
+      <div class="card-icon-wrap">🏡</div>
+      <div class="card-title" data-i18n="card.routine.title">איך נקדם את יישום ההדרכה בבית?</div>
+      <div class="card-subtitle" data-i18n="card.routine.subtitle">התאמת ההדרכה למשפחה</div>
       <div class="card-arrow">→</div>
     </div>
 
@@ -549,6 +541,14 @@
       <div class="card-icon-wrap">🌿</div>
       <div class="card-title" data-i18n="card.growth.title">עצרי לרגע</div>
       <div class="card-subtitle" data-i18n="card.growth.subtitle">מה למדת היום מהעבודה עם ההורה?</div>
+      <div class="card-arrow">→</div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="tool-card c-video" onclick="openModal('videos')">
+      <div class="card-icon-wrap">📹</div>
+      <div class="card-title" data-i18n="card.videos.title">לומדים ב־5 דקות</div>
+      <div class="card-subtitle" data-i18n="card.videos.subtitle">סרטונים להעמקה</div>
       <div class="card-arrow">→</div>
     </div>
 
@@ -570,15 +570,15 @@
   <div class="modal-sheet">
     <div class="sheet-handle-wrap"><div class="sheet-handle"></div></div>
     <div class="sheet-hdr">
-      <div class="sheet-title" data-i18n="modal.info.title">🤔 איך ההורה מעורב בטיפול?</div>
+      <div class="sheet-title" data-i18n="modal.info.title">🤔 זיהוי מעורבות ההורה</div>
       <button class="sheet-close" onclick="closeModal('info')">✕</button>
     </div>
     <div class="sheet-body">
-      <div class="info-banner" data-i18n="modal.info.banner">דרגי את מדדי המעורבות הנצפית אצל ההורה בכל פן. המערכת תציע שאלות לחשיבה וכיווני פעולה מבוססי גישת SDT.</div>
+      <div class="info-banner" data-i18n="modal.info.banner">דרגי את מדדי המעורבות הנצפית אצל ההורה בכל פן. המערכת תציע שאלות לחשיבה וכיווני פעולה בהתאם למודל ההשתתפות של הורים.</div>
 
       <div style="background: var(--surface); padding: 16px; border-radius: var(--radius-sm); margin-bottom: 16px; border-right: 4px solid var(--accent); font-size: 14px; line-height: 1.5; box-shadow: var(--shadow-sm);">
         <span data-i18n="modal.info.quote">💡 מעורבות ההורים הינה תהליך מורכב ודינמי הכולל היבטים רגשיים, התנהגותיים וקוגנטיביים</span>
-        <span style="display:block; font-size:11px; margin-top:6px; color:var(--text-muted); direction:ltr; text-align:right;" class="notranslate">(King et al., 2019, 2014)</span>
+        <span style="display:block; font-size:11px; margin-top:6px; color:var(--text-muted); direction:ltr; text-align:right;" class="notranslate">(King et al., 2014, 2019; D'Arrigo et al., 2020)</span>
       </div>
 
       <div style="font-size:12px; color:var(--danger); font-weight:700; margin-bottom:8px;" data-i18n="modal.info.warning">⚠️ אנא אל תזיני שמות או פרטים מזהים</div>
@@ -588,14 +588,15 @@
       <div class="acc-panel">
         <div class="acc-header" onclick="toggleAcc(this)">
           <div class="acc-icon" style="color:#2e86c1">♡</div>
-          <div class="acc-title-wrap"><div class="acc-title" data-i18n="acc.emotional.title">פן רגשי</div><div class="acc-sub" data-i18n="acc.emotional.sub">עניין, קרבה, ביטוי רגשי</div></div>
+          <div class="acc-title-wrap"><div class="acc-title" data-i18n="acc.emotional.title">פן רגשי</div><div class="acc-sub" data-i18n="acc.emotional.sub">השקעה רגשית של ההורה בתהליך עם המטפל (מילולית ולא מילולית).</div></div>
           <div class="acc-arrow">▼</div>
         </div>
         <div class="acc-body">
-          <div class="scale-row"><div class="scale-label" data-i18n="scale.interest.label">עניין</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.interest.pos">מביע עניין באופן תואם</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="emo1" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="emo1" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="emo1" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="emo1" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="emo1" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.interest.neg">אדישות</div></div></div>
-          <div class="scale-row"><div class="scale-label" data-i18n="scale.bodylang.label">שפת גוף</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.bodylang.pos">פתוחה וקרובה</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="emo2" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="emo2" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="emo2" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="emo2" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="emo2" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.bodylang.neg">סגורה ומרוחקת</div></div></div>
-          <div class="scale-row"><div class="scale-label" data-i18n="scale.hope.label">תקווה</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.hope.pos">אופטימיות</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="emo3" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="emo3" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="emo3" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="emo3" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="emo3" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.hope.neg">ייאוש</div></div></div>
-          <div class="scale-row"><div class="scale-label" data-i18n="scale.generalemotion.label">רגש כללי</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.generalemotion.pos">נינוח וגאה</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="emo4" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="emo4" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="emo4" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="emo4" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="emo4" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.generalemotion.neg">כעס / חרדה</div></div></div>
+          <div class="scale-row"><div class="scale-label" data-i18n="scale.interest.label">עניין</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.interest.pos">מביע עניין והתלהבות באופן מתאים</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="emo1" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="emo1" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="emo1" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="emo1" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="emo1" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.interest.neg">אדישות / חוסר עניין</div></div></div>
+          <div class="scale-row"><div class="scale-label" data-i18n="scale.bodylang.label">שפת גוף</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.bodylang.pos">פתוחה / קרובה</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="emo2" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="emo2" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="emo2" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="emo2" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="emo2" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.bodylang.neg">סגורה / מרוחקת</div></div></div>
+          <div class="scale-row"><div class="scale-label" data-i18n="scale.hope.label">תקווה</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.hope.pos">שפה ממוקדת כוחות, אופטימיות</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="emo3" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="emo3" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="emo3" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="emo3" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="emo3" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.hope.neg">ייאוש / חוסר תקווה</div></div></div>
+          <div class="scale-row"><div class="scale-label" data-i18n="scale.emotion.label">רגש</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.emotion.pos">שמח, נינוח, גאה במאמץ הילד</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="emo4" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="emo4" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="emo4" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="emo4" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="emo4" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.emotion.neg">חש כעס, חרדה, ייאוש</div></div></div>
+          <div class="scale-row"><div class="scale-label" data-i18n="scale.connection.label">קשר</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.connection.pos">אינטראקציה חמה</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="emo5" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="emo5" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="emo5" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="emo5" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="emo5" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.connection.neg">חוסר אמון / אינו מרגיש מתוקף</div></div></div>
           <input type="text" id="emoCtx" data-i18n-ph="placeholder.emoCtx" placeholder="מלל קצר לפן הרגשי (אופציונלי)..." style="margin-top: 16px; width: 100%; padding: 10px; border: 1px solid #e2e8f0; border-radius: var(--radius-sm); font-size: 13px; font-family: inherit;">
         </div>
       </div>
@@ -604,13 +605,15 @@
       <div class="acc-panel">
         <div class="acc-header" onclick="toggleAcc(this)">
           <div class="acc-icon" style="color:#d4ac0d">◎</div>
-          <div class="acc-title-wrap"><div class="acc-title" data-i18n="acc.cognitive.title">פן קוגניטיבי</div><div class="acc-sub" data-i18n="acc.cognitive.sub">הבנה, אמונה, ציפיות</div></div>
+          <div class="acc-title-wrap"><div class="acc-title" data-i18n="acc.cognitive.title">פן קוגניטיבי</div><div class="acc-sub" data-i18n="acc.cognitive.sub">אמונות ההורה לגבי הצורך ויעילות ההתערבות.</div></div>
           <div class="acc-arrow">▼</div>
         </div>
         <div class="acc-body">
-          <div class="scale-row"><div class="scale-label" data-i18n="scale.belief.label">אמונה בתהליך</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.belief.pos">מאמין בטיפול</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="cog1" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="cog1" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="cog1" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="cog1" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="cog1" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.belief.neg">מביע ספקות</div></div></div>
-          <div class="scale-row"><div class="scale-label" data-i18n="scale.understanding.label">הבנה</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.understanding.pos">מבין רציונל</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="cog2" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="cog2" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="cog2" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="cog2" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="cog2" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.understanding.neg">חוסר בהירות</div></div></div>
-          <div class="scale-row"><div class="scale-label" data-i18n="scale.questions.label">תקשורת שאלות</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.questions.pos">שואל וחוקר</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="cog3" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="cog3" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="cog3" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="cog3" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="cog3" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.questions.neg">נמנע משאלות</div></div></div>
+          <div class="scale-row"><div class="scale-label" data-i18n="scale.belief.label">אמונה</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.belief.pos">מאמין ביעילות הטיפול</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="cog1" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="cog1" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="cog1" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="cog1" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="cog1" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.belief.neg">ספקות ביעילות</div></div></div>
+          <div class="scale-row"><div class="scale-label" data-i18n="scale.understanding.label">הבנה</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.understanding.pos">מבין את הרציונל</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="cog2" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="cog2" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="cog2" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="cog2" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="cog2" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.understanding.neg">חוסר בהירות / ציפיות לא תואמות</div></div></div>
+          <div class="scale-row"><div class="scale-label" data-i18n="scale.cogimpl.label">יישום</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.cogimpl.pos">זוכר ומיישם הנחיות ביתיות</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="cog3" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="cog3" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="cog3" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="cog3" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="cog3" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.cogimpl.neg">לא זוכר ומיישם הנחיות ביתיות</div></div></div>
+          <div class="scale-row"><div class="scale-label" data-i18n="scale.communication.label">תקשורת</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.communication.pos">שואל שאלות להבהרה</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="cog4" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="cog4" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="cog4" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="cog4" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="cog4" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.communication.neg">הימנעות משאלות / חוסר תגובה</div></div></div>
+          <div class="scale-row"><div class="scale-label" data-i18n="scale.expectations.label">ציפיות</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.expectations.pos">ציפיות מתואמות</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="cog5" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="cog5" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="cog5" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="cog5" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="cog5" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.expectations.neg">מודל "תיקון" – מצפה מהמטפל לתקן</div></div></div>
           <input type="text" id="cogCtx" data-i18n-ph="placeholder.cogCtx" placeholder="מלל קצר לפן הקוגניטיבי (אופציונלי)..." style="margin-top: 16px; width: 100%; padding: 10px; border: 1px solid #e2e8f0; border-radius: var(--radius-sm); font-size: 13px; font-family: inherit;">
         </div>
       </div>
@@ -619,13 +622,15 @@
       <div class="acc-panel">
         <div class="acc-header" onclick="toggleAcc(this)">
           <div class="acc-icon" style="color:#1e8449">✦</div>
-          <div class="acc-title-wrap"><div class="acc-title" data-i18n="acc.behavioral.title">פן התנהגותי</div><div class="acc-sub" data-i18n="acc.behavioral.sub">נוכחות, יוזמה, יישום בבית</div></div>
+          <div class="acc-title-wrap"><div class="acc-title" data-i18n="acc.behavioral.title">פן התנהגותי</div><div class="acc-sub" data-i18n="acc.behavioral.sub">השתתפות פעילה במפגש ותרומה הדדית לאינטראקציה.</div></div>
           <div class="acc-arrow">▼</div>
         </div>
         <div class="acc-body">
-          <div class="scale-row"><div class="scale-label" data-i18n="scale.presence.label">נוכחות בחדר</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.presence.pos">נוכחות מלאה</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="beh1" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="beh1" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="beh1" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="beh1" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="beh1" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.presence.neg">מוסח (נייד וכו')</div></div></div>
-          <div class="scale-row"><div class="scale-label" data-i18n="scale.initiative.label">יוזמה בשיח</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.initiative.pos">תורם ויוזם</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="beh2" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="beh2" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="beh2" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="beh2" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="beh2" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.initiative.neg">פסיבי ושקט</div></div></div>
-          <div class="scale-row"><div class="scale-label" data-i18n="scale.homeimpl.label">יישום בבית</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.homeimpl.pos">עקבי בבית</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="beh3" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="beh3" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="beh3" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="beh3" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="beh3" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.homeimpl.neg">לא מיישם</div></div></div>
+          <div class="scale-row"><div class="scale-label" data-i18n="scale.presence.label">נוכחות</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.presence.pos">נוכחות מלאה (ללא נייד)</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="beh1" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="beh1" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="beh1" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="beh1" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="beh1" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.presence.neg">שימוש בנייד / איחורים</div></div></div>
+          <div class="scale-row"><div class="scale-label" data-i18n="scale.initiative.label">יוזמה</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.initiative.pos">יוזם אינטראקציה / בוחר פעילויות</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="beh2" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="beh2" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="beh2" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="beh2" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="beh2" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.initiative.neg">פסיביות / בוהה</div></div></div>
+          <div class="scale-row"><div class="scale-label" data-i18n="scale.dialogue.label">שיח</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.dialogue.pos">תורם לשיח בזמן אמת</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="beh3" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="beh3" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="beh3" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="beh3" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="beh3" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.dialogue.neg">עונה בקצרה / שקט</div></div></div>
+          <div class="scale-row"><div class="scale-label" data-i18n="scale.homeimpl.label">יישום</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.homeimpl.pos">מבצע/ת בעקביות בבית</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="beh4" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="beh4" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="beh4" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="beh4" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="beh4" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.homeimpl.neg">לא מבצע/ת בבית</div></div></div>
+          <div class="scale-row"><div class="scale-label" data-i18n="scale.behaviorfit.label">התנהגות</div><div class="scale-flex"><div class="s-txt s-pos" data-i18n="scale.behaviorfit.pos">מציג/ה התנהגות ועניין מתאימים</div><div class="s-dots"><label class="s-dot sd1"><input type="radio" name="beh5" value="1"><span></span></label><label class="s-dot sd2"><input type="radio" name="beh5" value="2"><span></span></label><label class="s-dot sd3"><input type="radio" name="beh5" value="3"><span></span></label><label class="s-dot sd4"><input type="radio" name="beh5" value="4"><span></span></label><label class="s-dot sd5"><input type="radio" name="beh5" value="5"><span></span></label></div><div class="s-txt s-neg" data-i18n="scale.behaviorfit.neg">מציג/ה התנהגות ועניין לא מתאימים</div></div></div>
           <input type="text" id="behCtx" data-i18n-ph="placeholder.behCtx" placeholder="מלל קצר לפן ההתנהגותי (אופציונלי)..." style="margin-top: 16px; width: 100%; padding: 10px; border: 1px solid #e2e8f0; border-radius: var(--radius-sm); font-size: 13px; font-family: inherit;">
         </div>
       </div>
@@ -639,6 +644,15 @@
 
       <div id="er-info" style="color:var(--danger); font-size:13px; font-weight:700; margin:12px 0; display:none;" data-i18n="alert.rateAtLeastOne">אנא דרגי לפחות מדד אחד במחוונים למעלה.</div>
 
+      <div class="field-group" style="margin-top:24px;">
+        <label class="field-label" data-i18n="info.initial.label">אות ראשונה של המטופל</label>
+        <input type="text" id="infoInitial" maxlength="1" data-i18n-ph="info.initial.placeholder" placeholder="לדוגמה: א" style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:var(--radius-sm); font-size:14px; font-family:inherit;">
+      </div>
+
+      <button class="btn btn-primary" style="background: linear-gradient(135deg, #27ae60, #2ecc71); box-shadow: 0 4px 12px rgba(39,174,96,0.25);" onclick="saveInfoCheck()" data-i18n="btn.saveInfo">💾 שמור</button>
+
+      <div id="er-info-save" style="color:var(--danger); font-size:13px; font-weight:700; margin:12px 0; display:none;" data-i18n="alert.infoSaveRequired">אנא סמני לפחות מדד אחד או כתבי הערה, וכתבי את האות הראשונה של המטופל, לפני השמירה.</div>
+
       <div class="ai-response" id="res-info">
         <div class="res-actions">
           <button class="copy-btn" onclick="copyText('rc-info', this)" data-i18n="btn.copy">📋 העתקה</button>
@@ -648,7 +662,12 @@
         <div class="res-header" data-i18n="res.info.header">ניתוח וצעדים להמשך</div>
         <div class="res-content" id="rc-info"></div>
       </div>
-      
+
+      <div style="margin-top: 40px; border-top: 2px solid #e2e8f0; padding-top: 24px;">
+        <h3 style="color:var(--primary); font-size:16px; margin-bottom:16px;" data-i18n="info.pastTitle">📚 הערכות קודמות</h3>
+        <div id="past-info-checks"></div>
+      </div>
+
       <div style="margin-top: 32px; padding-top: 20px; border-top: 1px dashed #cbd5e1; font-size: 11px; color: var(--text-muted); line-height: 1.6; direction: ltr; text-align: left;" class="notranslate">
         <p style="margin-bottom: 10px;"><strong>King, G., Chiarello, L. A., Thompson, L., McLarnon, M. J. W., Smart, E., Ziviani, J., & Pinto, M. (2019).</strong> Development of an observational measure of therapy engagement for pediatric rehabilitation. <em>Disability and Rehabilitation</em>, 41(1), 86–97. <a href="https://doi.org/10.1080/09638288.2017.1375031" target="_blank" style="color:var(--accent);">https://doi.org/10.1080/09638288.2017.1375031</a></p>
         <p style="margin-bottom: 10px;"><strong>King, G., Currie, M., & Petersen, P. (2014).</strong> Child and parent engagement in the mental health intervention process: A motivational framework. <em>Child and Adolescent Mental Health</em>, 19(1), 2–8. <a href="https://doi.org/10.1111/camh.12015" target="_blank" style="color:var(--accent);">https://doi.org/10.1111/camh.12015</a></p>
@@ -668,7 +687,7 @@
       <button class="sheet-close" onclick="closeModal('routine')">✕</button>
     </div>
     <div class="sheet-body">
-      <div class="info-banner" data-i18n="modal.routine.banner">לפני שמסיימים את המפגש, עצרי לרגע ובדקי האם התוכנית שבנית מתאימה למשפחה ותגדיל את הסיכוי ליישום בבית.</div>
+      <div class="info-banner" data-i18n="modal.routine.banner">לפני מתן ההדרכה בבית, עצרי לרגע ובדקי האם התוכנית שבנית מתאימה למשפחה ותגדיל את הסיכוי ליישום בבית.</div>
 
       <div class="routine-quote" style="background: var(--surface); padding: 16px; border-radius: var(--radius-sm); margin-bottom: 24px; border-right: 4px solid var(--warning); font-size: 14px; line-height: 1.5; box-shadow: var(--shadow-sm);">
         <span data-i18n="modal.routine.quote">💡 הורים מדגישים כי קל יותר ליישם את ההמלצות כאשר הן מותאמות לשגרת החיים, פשוטות, מעשיות ואינן יוצרות עומס נוסף</span>
@@ -836,21 +855,31 @@
         </div>
       </div>
 
+      <p style="font-size:12.5px; color:var(--text-muted); margin-top:-8px; margin-bottom:16px; line-height:1.5;" data-i18n="strategy.trackingNote">ניתן לסמן את האסטרטגיות שכבר יישמת או שאת מתכוונת ליישם, ולשמור את הסימון לצורך מעקב לאורך זמן.</p>
+
       <div class="checklist-title"><span data-i18n="checklist.belonging.title">♡ שייכות (Belonging)</span></div>
       <div class="cl-item" onclick="toggleCheckbox(this)"><input type="checkbox"><label data-i18n="cl.strat1">יצירת חיבור, הנאה וחוויות חיוביות במפגש</label></div>
       <div class="cl-item" onclick="toggleCheckbox(this)"><input type="checkbox"><label data-i18n="cl.strat2">קשיבות והתאמה ל"מקום בו נמצא ההורה"</label></div>
       <div class="cl-item" onclick="toggleCheckbox(this)"><input type="checkbox"><label data-i18n="cl.strat3">שותפות והכרה במומחיות ההורה לגבי ילדו</label></div>
       <div class="cl-item" onclick="toggleCheckbox(this)"><input type="checkbox"><label data-i18n="cl.strat4">הקשבה, אמפתיה ותקשורת מכבדת ורגישת-תרבות</label></div>
+      <input type="text" id="stratBelongingCtx" data-i18n-ph="strategy.belongingCtx.placeholder" placeholder="מלל חופשי נוסף לשייכות (אופציונלי)..." style="margin:8px 0 20px; width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:var(--radius-sm); font-size:13px; font-family:inherit;">
 
       <div class="checklist-title"><span data-i18n="checklist.autonomy.title">◎ אוטונומיה (Autonomy)</span></div>
       <div class="cl-item" onclick="toggleCheckbox(this)"><input type="checkbox"><label data-i18n="cl.strat5">אפשור להורה להעלות נושאים, דעות ושאלות</label></div>
       <div class="cl-item" onclick="toggleCheckbox(this)"><input type="checkbox"><label data-i18n="cl.strat6">מתן אפשרויות בחירה בטיפול ובאופן היישום בבית</label></div>
       <div class="cl-item" onclick="toggleCheckbox(this)"><input type="checkbox"><label data-i18n="cl.strat7">הגדרת מטרות משותפת יחד עם ההורה</label></div>
+      <input type="text" id="stratAutonomyCtx" data-i18n-ph="strategy.autonomyCtx.placeholder" placeholder="מלל חופשי נוסף לאוטונומיה (אופציונלי)..." style="margin:8px 0 20px; width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:var(--radius-sm); font-size:13px; font-family:inherit;">
 
       <div class="checklist-title"><span data-i18n="checklist.competence.title">✦ מסוגלות (Competence)</span></div>
       <div class="cl-item" onclick="toggleCheckbox(this)"><input type="checkbox"><label data-i18n="cl.strat8">פירוק לצעדים קטנים ליצירת חוויות הצלחה</label></div>
       <div class="cl-item" onclick="toggleCheckbox(this)"><input type="checkbox"><label data-i18n="cl.strat9">מודלינג, התנסות פעילה ומתן משוב מעצים בחדר</label></div>
       <div class="cl-item" onclick="toggleCheckbox(this)"><input type="checkbox"><label data-i18n="cl.strat10">מיקוד בחוזקות ובתרומת ההורה לתהליך</label></div>
+      <input type="text" id="stratCompetenceCtx" data-i18n-ph="strategy.competenceCtx.placeholder" placeholder="מלל חופשי נוסף למסוגלות (אופציונלי)..." style="margin:8px 0 20px; width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:var(--radius-sm); font-size:13px; font-family:inherit;">
+
+      <div class="field-group" style="margin-top:8px;">
+        <label class="field-label" data-i18n="info.initial.label">אות ראשונה של המטופל</label>
+        <input type="text" id="stratInitial" maxlength="1" data-i18n-ph="info.initial.placeholder" placeholder="לדוגמה: א" style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:var(--radius-sm); font-size:14px; font-family:inherit;">
+      </div>
 
       <div style="border-top: 2px solid var(--primary-light); padding-top: 24px; margin-top: 24px;">
         <h4 style="color:var(--primary); margin-bottom:16px;" data-i18n="reflection.short.title">🪞 רפלקציה קצרה (אופציונלי)</h4>
@@ -1147,21 +1176,6 @@ translations.he = {
   "info.allGood.q1": "מה בדיוק גורם למעורבות הזו לעבוד כל כך טוב?",
   "info.allGood.q2": "איך אפשר לשמר את זה גם כשיתעוררו אתגרים בהמשך?",
   "info.allGood.suggestion": "שקפי להורה משהו קונקרטי שראית שהוא עושה טוב, כדי לחזק את המסוגלות וההנעה שלו להמשיך.",
-  "info.belonging.interpretation": "הציונים הנמוכים ביותר מופיעים בתחום השייכות — ייתכן שההורה חש פחות מחובר או פחות \"שייך\" למרחב הטיפולי, ולא שההתרחקות שלו נובעת מחוסר עניין אמיתי.",
-  "info.belonging.q1": "מה היה יכול לגרום להורה הזה להרגיש יותר חלק מהתהליך כאן?",
-  "info.belonging.q2": "איך אני חווה את הקשר שלי איתו/ה עד כה?",
-  "info.belonging.q3": "מה מונע ממני ליצור קרבה רבה יותר עם ההורה הזה?",
-  "info.belonging.suggestion": "הקדישי בתחילת המפגש הבא כמה דקות לשיחה לא-פורמלית עם ההורה, בלי מיקוד במטלה, כדי לחזק את תחושת החיבור.",
-  "info.autonomy.interpretation": "הציונים הנמוכים ביותר מופיעים בתחום האוטונומיה — ייתכן שההורה לא חש שיש לו מספיק קול או בחירה בתהליך, מה שעלול לפגוע במוטיבציה הפנימית שלו.",
-  "info.autonomy.q1": "האם אני נותנת להורה הזה מספיק מקום להשפיע על אופן הטיפול?",
-  "info.autonomy.q2": "מה קורה כשההורה מנסה להעלות רעיון או דעה משלו?",
-  "info.autonomy.q3": "איך אפשר לשלב אותו/ה יותר בקבלת ההחלטות?",
-  "info.autonomy.suggestion": "תני להורה לבחור בין שתי חלופות ליישום המטרה הבאה בבית, כדי לחזק את תחושת הבחירה שלו.",
-  "info.competence.interpretation": "הציונים הנמוכים ביותר מופיעים בתחום המסוגלות — ייתכן שההורה חש חוסר ביטחון ביכולתו לתמוך בילד, מה שיכול להתבטא כחשש, הימנעות או ציניות כלפי התהליך.",
-  "info.competence.q1": "מה ראיתי שההורה כן הצליח לעשות, גם אם קטן?",
-  "info.competence.q2": "איך אני יכולה לשקף להורה הצלחות באופן שיחזק את הביטחון שלו?",
-  "info.competence.q3": "מה יעזור לי להבין טוב יותר מאיפה מגיע חוסר הביטחון הזה?",
-  "info.competence.suggestion": "שקפי להורה הצלחה קטנה וקונקרטית שראית במפגש, כדי לחזק את תחושת המסוגלות שלו.",
   "routine.meals.tip1": "שלבו את המטרה הטיפולית כחלק טבעי מהישיבה, ההגשה או האכילה עצמה (למשל תרגול אחיזה בכף/כוס, ישיבה יציבה ליד השולחן).",
   "routine.meals.tip2": "השתמשו בזמן ההמתנה בין מנות לתרגול קצר ולא מאולץ.",
   "routine.meals.tip3": "תנו לילד תפקיד קטן בהכנה או בהגשה שמערב את המטרה (לערבב, למזוג, לסדר).",
@@ -1222,15 +1236,12 @@ translations.he = {
   "tip.strat10": "ההדגשה שעשית על החוזקות וההצלחות הקטנות חשובה במיוחד — הורים רבים לא תמיד שמים לב להתקדמות האיטית בעצמם (Grandisson et al., 2023).",
   "tip.strat10.want": "כשתנסי את זה: חפשי הצלחה קטנה אחת של ההורה או הילד והדגישי אותה בקול — הורים רבים לא תמיד שמים לב לזה בעצמם (Grandisson et al., 2023).",
   "info.allGood.researchTip": "גם כשהמעורבות טובה, מומלץ להמשיך ולהדגיש הצלחות קטנות כדי לשמר את התהליך החיובי (Grandisson et al., 2023).",
-  "info.belonging.researchTip": "מחקר מדגיש כי השקעה בקשר עם ההורה כבר מתחילת הטיפול היא הבסיס למעורבות לאורך זמן (D'Arrigo et al., 2019).",
   "info.allEqual.interpretation": "שלושת הממדים (רגשי, קוגניטיבי והתנהגותי) דורגו פחות או יותר באותה הרמה. זה עשוי להצביע על כך שהמעורבות של ההורה עקבית ומאוזנת, ולאו דווקא שיש תחום ספציפי שדורש התייחסות נפרדת.",
   "info.allEqual.q1": "האם יש תחום מסוים שבו הייתי רוצה לראות שינוי, גם אם הציונים דומים בין הממדים?",
   "info.allEqual.q2": "מה מאפיין את מערכת היחסים שלי עם ההורה הזה כרגע, באופן כללי?",
   "info.allEqual.q3": "מה יכול לחזק את התמונה הכוללת של המעורבות, ולא רק ממד אחד ממנה?",
   "info.allEqual.suggestion": "מכיוון שהממדים דומים זה לזה, כדאי להתמקד בחיזוק הקשר הכללי בין ההורה למטפלת - אמון, תקשורת פתוחה והתאמה לצרכים המשתנים - שכן זה משפיע במקביל על כל ההיבטים של המעורבות.",
   "info.allEqual.researchTip": "מעורבות הורים מורכבת משלושה ממדים - רגשי, קוגניטיבי והתנהגותי - המשפיעים זה על זה באופן הדדי, כך שחיזוק הקשר הכללי עם ההורה יכול לתרום לכולם יחד (King et al., 2014).",
-  "info.autonomy.researchTip": "כאשר הורה לא מרגיש שיש לו מספיק קול בתהליך, מתן בחירה ממשית נמצא כמחזק את המוטיבציה הפנימית שלו (D'Arrigo et al., 2016).",
-  "info.competence.researchTip": "הורים המדווחים על תחושת מסוגלות גבוהה יותר הם לרוב אלה שחוו הצלחות קטנות שהודגשו על ידי המטפלת (D'Arrigo et al., 2019).",
   "strategy.modeLabel": "האם האסטרטגיות שתסמני הן:",
   "strategy.mode.implemented": "כבר יישמתי",
   "strategy.mode.want": "רוצה ליישם",
@@ -1257,7 +1268,29 @@ translations.he = {
   "impl.activityLabel": "מה נבחר ליישום:",
   "impl.barriersLabel": "חסמים אפשריים:",
   "impl.insightLabel": "תובנה:",
-  "impl.easeOtherLabel": "רעיונות נוספים:"
+  "impl.easeOtherLabel": "רעיונות נוספים:",
+  "info.emotional.interpretation": "הציונים הנמוכים ביותר מופיעים בפן הרגשי — ייתכן שההורה עדיין לא בונה תחושת אמון, תקווה או חיבור רגשי כלפי התהליך והמטפלת, מה שעלול להשפיע על נכונותו להשקיע (King et al., 2014).",
+  "info.emotional.q1": "מה ההורה מרגיש כלפיי וכלפי התהליך כרגע?",
+  "info.emotional.q2": "מה יכול לחזק את תחושת האמון והתקווה שלו?",
+  "info.emotional.q3": "האם יש משהו שגורם לו לחוש חרדה, כעס או ייאוש?",
+  "info.emotional.suggestion": "הקדישי כמה דקות לשיח לא-פורמלי עם ההורה ושקפי לו נקודה חיובית שראית, כדי לחזק את תחושת האמון והתקווה.",
+  "info.emotional.researchTip": "תחושת תקווה, ביטחון בתהליך ואמון במטפל הם חלק מרכזי מהמצב המיטבי של מעורבות הורים (King et al., 2014).",
+  "info.cognitive.interpretation": "הציונים הנמוכים ביותר מופיעים בפן הקוגניטיבי — ייתכן שההורה עדיין לא משוכנע ביעילות ההתערבות או שאין לו מספיק בהירות לגבי הרציונל והציפיות, מה שעלול להחליש את מחויבותו (King et al., 2014).",
+  "info.cognitive.q1": "האם ההורה מבין באמת למה אנחנו עושות את מה שאנחנו עושות?",
+  "info.cognitive.q2": "האם ציפיותיו מהתהליך תואמות את מה שריאלי לצפות?",
+  "info.cognitive.q3": "מה עשוי לחזק את האמון שלו ביעילות ההתערבות?",
+  "info.cognitive.suggestion": "הסבירי בקצרה את הרציונל שמאחורי הפעילות הבאה ובדקי עם ההורה שהציפיות ההדדיות תואמות.",
+  "info.cognitive.researchTip": "אמונה בכך שההתערבות נחוצה ותהיה יעילה (Conviction) נמצאה כמרכיב מרכזי במעורבות אופטימלית של הורים (King et al., 2014).",
+  "info.behavioral.interpretation": "הציונים הנמוכים ביותר מופיעים בפן ההתנהגותי — ייתכן שההורה עדיין מתקשה להשתתף באופן פעיל במפגש או ליישם בבית, מה שעשוי לשקף פחות תחושת מסוגלות (King et al., 2014; D'Arrigo et al., 2020).",
+  "info.behavioral.q1": "מה מונע מההורה להיות שותף פעיל יותר במפגש?",
+  "info.behavioral.q2": "האם ההורה מרגיש שהוא באמת מסוגל ליישם את המומלץ בבית?",
+  "info.behavioral.q3": "מה קטן שהצליח יכול לחזק את תחושת המסוגלות שלו?",
+  "info.behavioral.suggestion": "תני להורה תפקיד פעיל וקונקרטי בתוך המפגש הבא, כדי לחזק את תחושת המסוגלות וההשתתפות שלו.",
+  "info.behavioral.researchTip": "תחושת מסוגלות ליישם את המומלץ (Self-efficacy) נמצאה כאחד משלושת מרכיבי הליבה של מעורבות הורים אופטימלית (King et al., 2014).",
+  "info.noChecks": "אין עדיין הערכות שמורות.",
+  "info.group.emotional": "מעורבות רגשית",
+  "info.group.cognitive": "מעורבות קוגניטיבית",
+  "info.group.behavioral": "מעורבות התנהגותית"
 };
 
 translations.en = {
@@ -1268,9 +1301,9 @@ translations.en = {
   "hero.quote": "Parent engagement contributes to treatment success, improves the child's functioning, and helps embed recommendations into daily life.",
   "section.title": "Short, practical tools for promoting parent engagement in treatment.",
   "section.subtitle": "Welcome! Choose the tool that can help you in your next session. (Remember to apply clinical judgment)",
-  "card.info.title": "How is the parent engaged in treatment?",
+  "card.info.title": "Identifying Parent Engagement",
   "card.info.subtitle": "Identify the level of engagement and get direction for next steps.",
-  "card.routine.title": "How can we increase the chance of implementation?",
+  "card.routine.title": "How can we promote implementation of the home guidance?",
   "card.routine.subtitle": "Tailoring the guidance to the family",
   "card.strategies.title": "What can you do today?",
   "card.strategies.subtitle": "Short strategies to apply in the next session.",
@@ -1283,48 +1316,42 @@ translations.en = {
   "card.about.title": "A few words from me",
   "modal.growth.banner": "Today in treatment... what did you learn today from working with the parent?",
   "footer.content": "Edited by <strong>Bracha Yagoda</strong> as part of a Master's degree in Occupational Therapy, The Hebrew University of Jerusalem<br>Advisor: Dr. Nirit Lavon Erez<br>© All rights reserved",
-  "modal.info.title": "🤔 How is the parent engaged in treatment?",
-  "modal.info.banner": "Rate the observed engagement indicators for the parent in each dimension. The system will suggest reflection questions and action directions based on Self-Determination Theory (SDT).",
+  "modal.info.title": "🤔 Identifying Parent Engagement",
+  "modal.info.banner": "Rate the observed engagement indicators for the parent in each dimension. The system will suggest reflection questions and action directions based on the parent engagement model.",
   "modal.info.quote": "💡 Parent engagement is a complex, dynamic process that includes emotional, behavioral, and cognitive aspects",
   "modal.info.warning": "⚠️ Please do not enter names or identifying details",
   "acc.emotional.title": "Emotional aspect",
-  "acc.emotional.sub": "Interest, closeness, emotional expression",
+  "acc.emotional.sub": "The parent's emotional investment in the process with the therapist (verbal and nonverbal).",
   "scale.interest.label": "Interest",
-  "scale.interest.pos": "Shows matching interest",
-  "scale.interest.neg": "Indifference",
+  "scale.interest.pos": "Shows appropriate interest and enthusiasm",
+  "scale.interest.neg": "Indifference / lack of interest",
   "scale.bodylang.label": "Body language",
-  "scale.bodylang.pos": "Open and warm",
-  "scale.bodylang.neg": "Closed and distant",
+  "scale.bodylang.pos": "Open / warm",
+  "scale.bodylang.neg": "Closed / distant",
   "scale.hope.label": "Hope",
-  "scale.hope.pos": "Optimism",
-  "scale.hope.neg": "Despair",
-  "scale.generalemotion.label": "General emotion",
-  "scale.generalemotion.pos": "Calm and proud",
-  "scale.generalemotion.neg": "Anger / anxiety",
+  "scale.hope.pos": "Strengths-focused language, optimism",
+  "scale.hope.neg": "Despair / hopelessness",
   "placeholder.emoCtx": "Short note on the emotional aspect (optional)...",
   "acc.cognitive.title": "Cognitive aspect",
-  "acc.cognitive.sub": "Understanding, belief, expectations",
-  "scale.belief.label": "Belief in the process",
-  "scale.belief.pos": "Believes in the treatment",
-  "scale.belief.neg": "Expresses doubts",
+  "acc.cognitive.sub": "The parent's beliefs about the need for and effectiveness of the intervention.",
+  "scale.belief.label": "Belief",
+  "scale.belief.pos": "Believes in the treatment's effectiveness",
+  "scale.belief.neg": "Doubts about effectiveness",
   "scale.understanding.label": "Understanding",
   "scale.understanding.pos": "Understands the rationale",
-  "scale.understanding.neg": "Lack of clarity",
-  "scale.questions.label": "Question-asking",
-  "scale.questions.pos": "Asks and inquires",
-  "scale.questions.neg": "Avoids questions",
+  "scale.understanding.neg": "Lack of clarity / mismatched expectations",
   "placeholder.cogCtx": "Short note on the cognitive aspect (optional)...",
   "acc.behavioral.title": "Behavioral aspect",
-  "acc.behavioral.sub": "Presence, initiative, implementation at home",
-  "scale.presence.label": "Presence in the room",
-  "scale.presence.pos": "Fully present",
-  "scale.presence.neg": "Distracted (phone, etc.)",
-  "scale.initiative.label": "Initiative in conversation",
-  "scale.initiative.pos": "Contributes and initiates",
-  "scale.initiative.neg": "Passive and quiet",
-  "scale.homeimpl.label": "Implementation at home",
-  "scale.homeimpl.pos": "Consistent at home",
-  "scale.homeimpl.neg": "Not implementing",
+  "acc.behavioral.sub": "Active participation in the session and mutual contribution to the interaction.",
+  "scale.presence.label": "Presence",
+  "scale.presence.pos": "Fully present (no phone)",
+  "scale.presence.neg": "Using phone / arriving late",
+  "scale.initiative.label": "Initiative",
+  "scale.initiative.pos": "Initiates interaction / chooses activities",
+  "scale.initiative.neg": "Passive / staring blankly",
+  "scale.homeimpl.label": "Implementation",
+  "scale.homeimpl.pos": "Consistently carries out at home",
+  "scale.homeimpl.neg": "Doesn't carry out at home",
   "placeholder.behCtx": "Short note on the behavioral aspect (optional)...",
   "field.additionalContext.label": "Additional context (free text)",
   "placeholder.infoCtx": "For example: The father comes regularly but sits aside on his phone... Does this match?",
@@ -1335,7 +1362,7 @@ translations.en = {
   "btn.whatsapp": "💬 WhatsApp",
   "btn.print": "🖨️ Print",
   "modal.routine.title": "🏠 Home Implementation",
-  "modal.routine.banner": "Before ending the session, pause for a moment and check whether the plan you built truly fits the family and increases the chance it will be implemented at home.",
+  "modal.routine.banner": "Before providing home guidance, pause for a moment and check whether the plan you built truly fits the family and increases the chance it will be implemented at home.",
   "modal.routine.quote": "💡 Parents emphasize that it's easier to implement recommendations when they fit daily routines, are simple, practical, and don't create extra burden",
   "loading.routine": "Generating ideas...",
   "res.routine.header": "Check Summary",
@@ -1433,21 +1460,6 @@ translations.en = {
   "info.allGood.q1": "What exactly is making this engagement work so well?",
   "info.allGood.q2": "How can this be maintained even when challenges arise later on?",
   "info.allGood.suggestion": "Reflect back to the parent something concrete you saw them do well, to reinforce their sense of competence and motivation to continue.",
-  "info.belonging.interpretation": "The lowest scores appear in the belonging dimension — the parent may feel less connected or less \"at home\" in the therapeutic space, rather than genuinely lacking interest.",
-  "info.belonging.q1": "What could help this parent feel more like part of the process here?",
-  "info.belonging.q2": "How do I experience my relationship with them so far?",
-  "info.belonging.q3": "What's keeping me from building more closeness with this parent?",
-  "info.belonging.suggestion": "At the start of the next session, spend a few minutes on informal conversation with the parent, without focusing on the task, to strengthen the sense of connection.",
-  "info.autonomy.interpretation": "The lowest scores appear in the autonomy dimension — the parent may not feel they have enough voice or choice in the process, which can undermine their intrinsic motivation.",
-  "info.autonomy.q1": "Am I giving this parent enough room to influence how treatment happens?",
-  "info.autonomy.q2": "What happens when the parent tries to raise their own idea or opinion?",
-  "info.autonomy.q3": "How can I involve them more in decision-making?",
-  "info.autonomy.suggestion": "Let the parent choose between two options for implementing the next goal at home, to reinforce their sense of choice.",
-  "info.competence.interpretation": "The lowest scores appear in the competence dimension — the parent may feel unsure of their ability to support the child, which can show up as worry, avoidance, or cynicism toward the process.",
-  "info.competence.q1": "What have I seen the parent succeed at, even something small?",
-  "info.competence.q2": "How can I reflect successes back to the parent in a way that reinforces their confidence?",
-  "info.competence.q3": "What would help me better understand where this lack of confidence comes from?",
-  "info.competence.suggestion": "Reflect back to the parent one small, concrete success you saw in the session, to reinforce their sense of competence.",
   "info.emotionalNote": "⚠️ Note: the parent is expressing notable emotional distress (anger/anxiety). It may be worth taking time to hold that emotion before moving on to practical work.",
   "reflect.header.covered": "✅ Topics you covered",
   "reflect.header.toConsider": "💭 Questions to consider for topics not yet raised",
@@ -1498,15 +1510,12 @@ translations.en = {
   "tip.strat10": "Highlighting strengths and small wins was especially valuable — many parents don't always notice slow progress on their own (Grandisson et al., 2023).",
   "tip.strat10.want": "When you try this: look for one small success by the parent or child and say it out loud — many parents don't always notice this themselves (Grandisson et al., 2023).",
   "info.allGood.researchTip": "Even when engagement is going well, it's worth continuing to highlight small wins to sustain the positive process (Grandisson et al., 2023).",
-  "info.belonging.researchTip": "Research emphasizes that investing in the relationship with the parent from the very start of treatment is the foundation for long-term engagement (D'Arrigo et al., 2019).",
   "info.allEqual.interpretation": "All three dimensions (emotional, cognitive, and behavioral) were rated at roughly the same level. This may indicate that the parent's engagement is consistent and balanced, rather than there being one specific area that needs separate attention.",
   "info.allEqual.q1": "Is there a particular area I'd still like to see change in, even though the scores are similar across dimensions?",
   "info.allEqual.q2": "How would I describe my overall relationship with this parent right now?",
   "info.allEqual.q3": "What could strengthen the overall picture of engagement, rather than just one dimension of it?",
   "info.allEqual.suggestion": "Since the dimensions are similar to one another, it's worth focusing on strengthening the overall parent-therapist relationship — trust, open communication, and responsiveness to changing needs — since this affects all aspects of engagement at once.",
   "info.allEqual.researchTip": "Parent engagement is made up of three interrelated dimensions — emotional, cognitive, and behavioral — that reciprocally influence one another, so strengthening the overall relationship with the parent can benefit all three at once (King et al., 2014).",
-  "info.autonomy.researchTip": "When a parent doesn't feel they have enough voice in the process, genuine choice has been found to strengthen their intrinsic motivation (D'Arrigo et al., 2016).",
-  "info.competence.researchTip": "Parents who report a stronger sense of competence are often those whose small successes were highlighted by the therapist (D'Arrigo et al., 2019).",
   "strategy.modeLabel": "Are these strategies:",
   "strategy.mode.implemented": "Already implemented",
   "strategy.mode.want": "Strategies I want to try",
@@ -1576,7 +1585,58 @@ translations.en = {
   "impl.ease.otherPlaceholder": "Additional ideas to ease implementation (optional)...",
   "impl.easeOtherLabel": "Additional ideas:",
   "video5.title": "The Key to Parental Engagement",
-  "modal.info.clinicalNote": "Remember that clinical judgment should always be applied"
+  "modal.info.clinicalNote": "Remember that clinical judgment should always be applied",
+  "scale.emotion.label": "Emotion",
+  "scale.emotion.pos": "Happy, calm, proud of the child's effort",
+  "scale.emotion.neg": "Feels anger, anxiety, despair",
+  "scale.connection.label": "Connection",
+  "scale.connection.pos": "Warm interaction",
+  "scale.connection.neg": "Lack of trust / doesn't feel validated",
+  "scale.cogimpl.label": "Implementation",
+  "scale.cogimpl.pos": "Remembers and applies home instructions",
+  "scale.cogimpl.neg": "Doesn't remember or apply home instructions",
+  "scale.communication.label": "Communication",
+  "scale.communication.pos": "Asks clarifying questions",
+  "scale.communication.neg": "Avoids questions / unresponsive",
+  "scale.expectations.label": "Expectations",
+  "scale.expectations.pos": "Aligned expectations",
+  "scale.expectations.neg": "\"Fix-it\" model — expects the therapist to fix it",
+  "scale.dialogue.label": "Dialogue",
+  "scale.dialogue.pos": "Contributes to real-time conversation",
+  "scale.dialogue.neg": "Gives short answers / quiet",
+  "scale.behaviorfit.label": "Behavior",
+  "scale.behaviorfit.pos": "Shows appropriate behavior and interest",
+  "scale.behaviorfit.neg": "Shows inappropriate behavior and interest",
+  "info.emotional.interpretation": "The lowest scores appear in the emotional dimension — the parent may not yet have built a sense of trust, hope, or emotional connection toward the process and the therapist, which may affect their willingness to invest (King et al., 2014).",
+  "info.emotional.q1": "What does the parent feel toward me and toward the process right now?",
+  "info.emotional.q2": "What could strengthen their sense of trust and hope?",
+  "info.emotional.q3": "Is there something causing them to feel anxious, angry, or hopeless?",
+  "info.emotional.suggestion": "Spend a few minutes on informal conversation with the parent and reflect back a positive point you noticed, to strengthen their sense of trust and hope.",
+  "info.emotional.researchTip": "A sense of hope, trust in the process, and confidence in the therapist are central to an optimal state of parent engagement (King et al., 2014).",
+  "info.cognitive.interpretation": "The lowest scores appear in the cognitive dimension — the parent may not yet be convinced of the intervention's effectiveness, or may lack clarity about the rationale and expectations, which may weaken their commitment (King et al., 2014).",
+  "info.cognitive.q1": "Does the parent truly understand why we're doing what we're doing?",
+  "info.cognitive.q2": "Do their expectations of the process match what's realistic to expect?",
+  "info.cognitive.q3": "What might strengthen their belief in the intervention's effectiveness?",
+  "info.cognitive.suggestion": "Briefly explain the rationale behind the next activity and check with the parent that mutual expectations align.",
+  "info.cognitive.researchTip": "Believing that the intervention is needed and will be effective (conviction) was found to be a central component of optimal parent engagement (King et al., 2014).",
+  "info.behavioral.interpretation": "The lowest scores appear in the behavioral dimension — the parent may still be struggling to actively participate in the session or implement at home, which may reflect a lower sense of competence (King et al., 2014; D'Arrigo et al., 2020).",
+  "info.behavioral.q1": "What's preventing the parent from being a more active partner in the session?",
+  "info.behavioral.q2": "Does the parent feel they're truly able to implement what's recommended at home?",
+  "info.behavioral.q3": "What small success could strengthen their sense of competence?",
+  "info.behavioral.suggestion": "Give the parent an active, concrete role within the next session, to strengthen their sense of competence and participation.",
+  "info.behavioral.researchTip": "A sense of competence to implement what's recommended (self-efficacy) was found to be one of three core components of optimal parent engagement (King et al., 2014).",
+  "info.initial.label": "Patient's first initial",
+  "info.initial.placeholder": "e.g., A",
+  "btn.saveInfo": "💾 Save",
+  "alert.infoSaveRequired": "Please mark at least one indicator or write a note, and enter the patient's first initial, before saving.",
+  "info.pastTitle": "📚 Past assessments",
+  "strategy.trackingNote": "You can mark the strategies you've already implemented or intend to implement, and save this to track them over time.",
+  "strategy.belongingCtx.placeholder": "Additional free text for belonging (optional)...",
+  "strategy.autonomyCtx.placeholder": "Additional free text for autonomy (optional)...",
+  "strategy.competenceCtx.placeholder": "Additional free text for competence (optional)...",
+  "info.group.emotional": "Emotional engagement",
+  "info.group.cognitive": "Cognitive engagement",
+  "info.group.behavioral": "Behavioral engagement"
 };
 
 translations.fr = {
@@ -1587,9 +1647,9 @@ translations.fr = {
   "hero.quote": "L'engagement des parents contribue à la réussite du traitement, à l'amélioration du fonctionnement de l'enfant et à l'intégration des recommandations dans la vie quotidienne.",
   "section.title": "Des outils courts et pratiques pour promouvoir l'engagement parental dans le traitement.",
   "section.subtitle": "Bienvenue ! Choisissez l'outil qui peut vous aider lors de votre prochaine séance. (N'oubliez pas d'exercer votre jugement clinique)",
-  "card.info.title": "Comment le parent est-il engagé dans le traitement ?",
+  "card.info.title": "Identifier l'engagement du parent",
   "card.info.subtitle": "Identifiez le niveau d'engagement et obtenez une orientation pour la suite.",
-  "card.routine.title": "Comment augmenter les chances d'application ?",
+  "card.routine.title": "Comment favoriser l'application de l'accompagnement à domicile ?",
   "card.routine.subtitle": "Adapter l'accompagnement à la famille",
   "card.strategies.title": "Que peut-on faire dès aujourd'hui ?",
   "card.strategies.subtitle": "Stratégies courtes à appliquer lors de la prochaine séance.",
@@ -1602,48 +1662,42 @@ translations.fr = {
   "card.about.title": "Quelques mots de ma part",
   "modal.growth.banner": "Aujourd'hui en séance... qu'avez-vous appris aujourd'hui du travail avec le parent ?",
   "footer.content": "Rédigé par <strong>Bracha Yagoda</strong> dans le cadre d'un master en ergothérapie, Université hébraïque de Jérusalem<br>Encadrement : Dr Nirit Lavon Erez<br>© Tous droits réservés",
-  "modal.info.title": "🤔 Comment le parent est-il engagé dans le traitement ?",
-  "modal.info.banner": "Évaluez les indicateurs d'engagement observés chez le parent dans chaque dimension. Le système proposera des questions de réflexion et des pistes d'action basées sur la théorie de l'autodétermination (SDT).",
+  "modal.info.title": "🤔 Identifier l'engagement du parent",
+  "modal.info.banner": "Évaluez les indicateurs d'engagement observés chez le parent dans chaque dimension. Le système proposera des questions de réflexion et des pistes d'action basées sur le modèle d'engagement parental.",
   "modal.info.quote": "💡 L'engagement des parents est un processus complexe et dynamique qui comprend des aspects émotionnels, comportementaux et cognitifs",
   "modal.info.warning": "⚠️ Veuillez ne pas saisir de noms ou de détails identifiants",
   "acc.emotional.title": "Aspect émotionnel",
-  "acc.emotional.sub": "Intérêt, proximité, expression émotionnelle",
+  "acc.emotional.sub": "L'investissement émotionnel du parent dans le processus avec le thérapeute (verbal et non verbal).",
   "scale.interest.label": "Intérêt",
-  "scale.interest.pos": "Montre un intérêt approprié",
-  "scale.interest.neg": "Indifférence",
+  "scale.interest.pos": "Montre un intérêt et un enthousiasme appropriés",
+  "scale.interest.neg": "Indifférence / manque d'intérêt",
   "scale.bodylang.label": "Langage corporel",
-  "scale.bodylang.pos": "Ouvert et proche",
-  "scale.bodylang.neg": "Fermé et distant",
+  "scale.bodylang.pos": "Ouvert / chaleureux",
+  "scale.bodylang.neg": "Fermé / distant",
   "scale.hope.label": "Espoir",
-  "scale.hope.pos": "Optimisme",
-  "scale.hope.neg": "Désespoir",
-  "scale.generalemotion.label": "Émotion générale",
-  "scale.generalemotion.pos": "Calme et fier",
-  "scale.generalemotion.neg": "Colère / anxiété",
+  "scale.hope.pos": "Langage axé sur les forces, optimisme",
+  "scale.hope.neg": "Désespoir / absence d'espoir",
   "placeholder.emoCtx": "Brève note sur l'aspect émotionnel (facultatif)...",
   "acc.cognitive.title": "Aspect cognitif",
-  "acc.cognitive.sub": "Compréhension, croyance, attentes",
-  "scale.belief.label": "Croyance dans le processus",
-  "scale.belief.pos": "Croit au traitement",
-  "scale.belief.neg": "Exprime des doutes",
+  "acc.cognitive.sub": "Les croyances du parent concernant la nécessité et l'efficacité de l'intervention.",
+  "scale.belief.label": "Croyance",
+  "scale.belief.pos": "Croit en l'efficacité du traitement",
+  "scale.belief.neg": "Doutes sur l'efficacité",
   "scale.understanding.label": "Compréhension",
-  "scale.understanding.pos": "Comprend la logique",
-  "scale.understanding.neg": "Manque de clarté",
-  "scale.questions.label": "Communication par questions",
-  "scale.questions.pos": "Pose des questions et explore",
-  "scale.questions.neg": "Évite les questions",
+  "scale.understanding.pos": "Comprend le raisonnement",
+  "scale.understanding.neg": "Manque de clarté / attentes non concordantes",
   "placeholder.cogCtx": "Brève note sur l'aspect cognitif (facultatif)...",
   "acc.behavioral.title": "Aspect comportemental",
-  "acc.behavioral.sub": "Présence, initiative, application à la maison",
-  "scale.presence.label": "Présence dans la salle",
-  "scale.presence.pos": "Pleinement présent",
-  "scale.presence.neg": "Distrait (téléphone, etc.)",
-  "scale.initiative.label": "Initiative dans l'échange",
-  "scale.initiative.pos": "Contribue et prend l'initiative",
-  "scale.initiative.neg": "Passif et silencieux",
-  "scale.homeimpl.label": "Application à la maison",
-  "scale.homeimpl.pos": "Cohérent à la maison",
-  "scale.homeimpl.neg": "N'applique pas",
+  "acc.behavioral.sub": "Participation active à la séance et contribution mutuelle à l'interaction.",
+  "scale.presence.label": "Présence",
+  "scale.presence.pos": "Pleinement présent (sans téléphone)",
+  "scale.presence.neg": "Utilise son téléphone / arrive en retard",
+  "scale.initiative.label": "Initiative",
+  "scale.initiative.pos": "Prend l'initiative / choisit des activités",
+  "scale.initiative.neg": "Passif / regard vide",
+  "scale.homeimpl.label": "Application",
+  "scale.homeimpl.pos": "Applique de manière constante à la maison",
+  "scale.homeimpl.neg": "N'applique pas à la maison",
   "placeholder.behCtx": "Brève note sur l'aspect comportemental (facultatif)...",
   "field.additionalContext.label": "Contexte supplémentaire (description libre)",
   "placeholder.infoCtx": "Par exemple : le père vient régulièrement mais reste à l'écart sur son téléphone... Est-ce cohérent ?",
@@ -1654,7 +1708,7 @@ translations.fr = {
   "btn.whatsapp": "💬 WhatsApp",
   "btn.print": "🖨️ Imprimer",
   "modal.routine.title": "🏠 Application à la maison",
-  "modal.routine.banner": "Avant de terminer la séance, prenez un instant pour vérifier si le plan que vous avez construit convient vraiment à la famille et augmente les chances qu'il soit appliqué à la maison.",
+  "modal.routine.banner": "Avant de donner l'accompagnement à domicile, prenez un instant pour vérifier si le plan que vous avez construit convient vraiment à la famille et augmente les chances qu'il soit appliqué à la maison.",
   "modal.routine.quote": "💡 Les parents soulignent qu'il est plus facile d'appliquer les recommandations lorsqu'elles s'intègrent à la routine de vie, qu'elles sont simples, pratiques et qu'elles ne créent pas de charge supplémentaire",
   "loading.routine": "Génération d'idées...",
   "res.routine.header": "Résumé de la vérification",
@@ -1752,21 +1806,6 @@ translations.fr = {
   "info.allGood.q1": "Qu'est-ce qui fait exactement que cet engagement fonctionne si bien ?",
   "info.allGood.q2": "Comment maintenir cela même lorsque des difficultés apparaîtront plus tard ?",
   "info.allGood.suggestion": "Renvoyez au parent quelque chose de concret que vous l'avez vu bien faire, pour renforcer son sentiment de compétence et sa motivation à continuer.",
-  "info.belonging.interpretation": "Les scores les plus bas apparaissent dans la dimension d'appartenance — le parent se sent peut-être moins connecté ou moins « à sa place » dans l'espace thérapeutique, plutôt que réellement désintéressé.",
-  "info.belonging.q1": "Qu'est-ce qui pourrait aider ce parent à se sentir davantage partie prenante du processus ici ?",
-  "info.belonging.q2": "Comment est-ce que je vis ma relation avec lui/elle jusqu'à présent ?",
-  "info.belonging.q3": "Qu'est-ce qui m'empêche de créer plus de proximité avec ce parent ?",
-  "info.belonging.suggestion": "Au début de la prochaine séance, prenez quelques minutes de conversation informelle avec le parent, sans vous concentrer sur la tâche, pour renforcer le sentiment de connexion.",
-  "info.autonomy.interpretation": "Les scores les plus bas apparaissent dans la dimension d'autonomie — le parent n'a peut-être pas l'impression d'avoir assez de voix ou de choix dans le processus, ce qui peut nuire à sa motivation intrinsèque.",
-  "info.autonomy.q1": "Est-ce que je donne à ce parent assez de place pour influencer la façon dont le traitement se déroule ?",
-  "info.autonomy.q2": "Que se passe-t-il quand le parent essaie d'exprimer sa propre idée ou opinion ?",
-  "info.autonomy.q3": "Comment puis-je l'impliquer davantage dans la prise de décision ?",
-  "info.autonomy.suggestion": "Laissez le parent choisir entre deux options pour appliquer le prochain objectif à la maison, afin de renforcer son sentiment de choix.",
-  "info.competence.interpretation": "Les scores les plus bas apparaissent dans la dimension de compétence — le parent se sent peut-être incertain de sa capacité à soutenir l'enfant, ce qui peut se traduire par de l'inquiétude, de l'évitement ou du cynisme envers le processus.",
-  "info.competence.q1": "Qu'ai-je vu le parent réussir, même quelque chose de petit ?",
-  "info.competence.q2": "Comment puis-je renvoyer les réussites au parent d'une manière qui renforce sa confiance ?",
-  "info.competence.q3": "Qu'est-ce qui m'aiderait à mieux comprendre d'où vient ce manque de confiance ?",
-  "info.competence.suggestion": "Renvoyez au parent une petite réussite concrète que vous avez observée pendant la séance, pour renforcer son sentiment de compétence.",
   "info.emotionalNote": "⚠️ Attention : le parent exprime une détresse émotionnelle notable (colère/anxiété). Il peut être utile de prendre le temps d'accueillir cette émotion avant de poursuivre le travail pratique.",
   "reflect.header.covered": "✅ Sujets abordés",
   "reflect.header.toConsider": "💭 Questions à considérer pour les sujets pas encore abordés",
@@ -1817,15 +1856,12 @@ translations.fr = {
   "tip.strat10": "Mettre en valeur les forces et les petites réussites a été particulièrement précieux — de nombreux parents ne remarquent pas toujours les progrès lents par eux-mêmes (Grandisson et al., 2023).",
   "tip.strat10.want": "Quand vous essaierez cela : cherchez une petite réussite du parent ou de l'enfant et dites-la à voix haute — de nombreux parents ne le remarquent pas toujours eux-mêmes (Grandisson et al., 2023).",
   "info.allGood.researchTip": "Même quand l'engagement va bien, il vaut la peine de continuer à souligner les petites réussites pour maintenir le processus positif (Grandisson et al., 2023).",
-  "info.belonging.researchTip": "La recherche souligne qu'investir dans la relation avec le parent dès le début du traitement est la base d'un engagement durable (D'Arrigo et al., 2019).",
   "info.allEqual.interpretation": "Les trois dimensions (émotionnelle, cognitive et comportementale) ont été évaluées à peu près au même niveau. Cela peut indiquer que l'engagement du parent est cohérent et équilibré, plutôt qu'il n'y ait un domaine spécifique nécessitant une attention particulière.",
   "info.allEqual.q1": "Y a-t-il un domaine particulier où j'aimerais encore voir un changement, même si les scores sont similaires entre les dimensions ?",
   "info.allEqual.q2": "Comment décrirais-je ma relation globale avec ce parent en ce moment ?",
   "info.allEqual.q3": "Qu'est-ce qui pourrait renforcer l'image globale de l'engagement, plutôt qu'une seule de ses dimensions ?",
   "info.allEqual.suggestion": "Puisque les dimensions sont similaires entre elles, il vaut la peine de se concentrer sur le renforcement de la relation globale parent-thérapeute — confiance, communication ouverte et adaptation aux besoins changeants — car cela affecte tous les aspects de l'engagement à la fois.",
   "info.allEqual.researchTip": "L'engagement parental est composé de trois dimensions interreliées — émotionnelle, cognitive et comportementale — qui s'influencent mutuellement, de sorte que renforcer la relation globale avec le parent peut bénéficier aux trois à la fois (King et al., 2014).",
-  "info.autonomy.researchTip": "Lorsqu'un parent ne se sent pas assez entendu dans le processus, un vrai choix s'est révélé renforcer sa motivation intrinsèque (D'Arrigo et al., 2016).",
-  "info.competence.researchTip": "Les parents qui rapportent un sentiment de compétence plus fort sont souvent ceux dont les petites réussites ont été soulignées par la thérapeute (D'Arrigo et al., 2019).",
   "strategy.modeLabel": "Ces stratégies sont-elles :",
   "strategy.mode.implemented": "Déjà appliquées",
   "strategy.mode.want": "Stratégies que je veux essayer",
@@ -1895,7 +1931,58 @@ translations.fr = {
   "impl.ease.otherPlaceholder": "Idées supplémentaires pour faciliter l'application (optionnel)...",
   "impl.easeOtherLabel": "Idées supplémentaires :",
   "video5.title": "La clé de l'engagement parental",
-  "modal.info.clinicalNote": "N'oubliez pas d'exercer votre jugement clinique en toutes circonstances"
+  "modal.info.clinicalNote": "N'oubliez pas d'exercer votre jugement clinique en toutes circonstances",
+  "scale.emotion.label": "Émotion",
+  "scale.emotion.pos": "Heureux, calme, fier de l'effort de l'enfant",
+  "scale.emotion.neg": "Ressent de la colère, de l'anxiété, du désespoir",
+  "scale.connection.label": "Lien",
+  "scale.connection.pos": "Interaction chaleureuse",
+  "scale.connection.neg": "Manque de confiance / ne se sent pas validé",
+  "scale.cogimpl.label": "Application",
+  "scale.cogimpl.pos": "Se souvient et applique les consignes à la maison",
+  "scale.cogimpl.neg": "Ne se souvient pas et n'applique pas les consignes à la maison",
+  "scale.communication.label": "Communication",
+  "scale.communication.pos": "Pose des questions de clarification",
+  "scale.communication.neg": "Évite les questions / peu réactif",
+  "scale.expectations.label": "Attentes",
+  "scale.expectations.pos": "Attentes alignées",
+  "scale.expectations.neg": "Modèle de « réparation » — attend que le thérapeute répare",
+  "scale.dialogue.label": "Dialogue",
+  "scale.dialogue.pos": "Contribue à l'échange en temps réel",
+  "scale.dialogue.neg": "Répond brièvement / silencieux",
+  "scale.behaviorfit.label": "Comportement",
+  "scale.behaviorfit.pos": "Montre un comportement et un intérêt appropriés",
+  "scale.behaviorfit.neg": "Montre un comportement et un intérêt inappropriés",
+  "info.emotional.interpretation": "Les scores les plus bas apparaissent dans la dimension émotionnelle — le parent n'a peut-être pas encore construit un sentiment de confiance, d'espoir ou de connexion émotionnelle envers le processus et le thérapeute, ce qui peut affecter sa volonté de s'investir (King et al., 2014).",
+  "info.emotional.q1": "Que ressent le parent envers moi et envers le processus en ce moment ?",
+  "info.emotional.q2": "Qu'est-ce qui pourrait renforcer son sentiment de confiance et d'espoir ?",
+  "info.emotional.q3": "Y a-t-il quelque chose qui lui fait ressentir de l'anxiété, de la colère ou du désespoir ?",
+  "info.emotional.suggestion": "Consacrez quelques minutes à une conversation informelle avec le parent et renvoyez-lui un point positif que vous avez remarqué, pour renforcer son sentiment de confiance et d'espoir.",
+  "info.emotional.researchTip": "Un sentiment d'espoir, de confiance dans le processus et de confiance envers le thérapeute sont au cœur d'un état optimal d'engagement parental (King et al., 2014).",
+  "info.cognitive.interpretation": "Les scores les plus bas apparaissent dans la dimension cognitive — le parent n'est peut-être pas encore convaincu de l'efficacité de l'intervention, ou manque de clarté sur le raisonnement et les attentes, ce qui peut affaiblir son engagement (King et al., 2014).",
+  "info.cognitive.q1": "Le parent comprend-il vraiment pourquoi nous faisons ce que nous faisons ?",
+  "info.cognitive.q2": "Ses attentes envers le processus correspondent-elles à ce qui est réaliste ?",
+  "info.cognitive.q3": "Qu'est-ce qui pourrait renforcer sa confiance dans l'efficacité de l'intervention ?",
+  "info.cognitive.suggestion": "Expliquez brièvement le raisonnement derrière la prochaine activité et vérifiez avec le parent que les attentes mutuelles concordent.",
+  "info.cognitive.researchTip": "Croire que l'intervention est nécessaire et sera efficace (conviction) s'est révélé être une composante centrale d'un engagement parental optimal (King et al., 2014).",
+  "info.behavioral.interpretation": "Les scores les plus bas apparaissent dans la dimension comportementale — le parent a peut-être encore du mal à participer activement à la séance ou à appliquer à la maison, ce qui peut refléter un sentiment de compétence moindre (King et al., 2014 ; D'Arrigo et al., 2020).",
+  "info.behavioral.q1": "Qu'est-ce qui empêche le parent d'être un partenaire plus actif dans la séance ?",
+  "info.behavioral.q2": "Le parent sent-il qu'il est vraiment capable d'appliquer ce qui est recommandé à la maison ?",
+  "info.behavioral.q3": "Quel petit succès pourrait renforcer son sentiment de compétence ?",
+  "info.behavioral.suggestion": "Donnez au parent un rôle actif et concret lors de la prochaine séance, pour renforcer son sentiment de compétence et de participation.",
+  "info.behavioral.researchTip": "Un sentiment de compétence pour appliquer ce qui est recommandé (auto-efficacité) s'est révélé être l'une des trois composantes centrales d'un engagement parental optimal (King et al., 2014).",
+  "info.initial.label": "Initiale du prénom de l'enfant",
+  "info.initial.placeholder": "ex. : A",
+  "btn.saveInfo": "💾 Enregistrer",
+  "alert.infoSaveRequired": "Veuillez cocher au moins un indicateur ou écrire une note, et saisir l'initiale du prénom de l'enfant, avant d'enregistrer.",
+  "info.pastTitle": "📚 Évaluations précédentes",
+  "strategy.trackingNote": "Vous pouvez cocher les stratégies que vous avez déjà appliquées ou que vous comptez appliquer, et enregistrer cela pour en assurer le suivi dans le temps.",
+  "strategy.belongingCtx.placeholder": "Texte libre supplémentaire pour l'appartenance (optionnel)...",
+  "strategy.autonomyCtx.placeholder": "Texte libre supplémentaire pour l'autonomie (optionnel)...",
+  "strategy.competenceCtx.placeholder": "Texte libre supplémentaire pour la compétence (optionnel)...",
+  "info.group.emotional": "Engagement émotionnel",
+  "info.group.cognitive": "Engagement cognitif",
+  "info.group.behavioral": "Engagement comportemental"
 };
 
 translations.ru = {
@@ -1906,9 +1993,9 @@ translations.ru = {
   "hero.quote": "Вовлечённость родителей способствует успеху лечения, улучшению функционирования ребёнка и внедрению рекомендаций в повседневную жизнь.",
   "section.title": "Короткие практические инструменты для повышения вовлечённости родителей в терапию.",
   "section.subtitle": "Добро пожаловать! Выберите инструмент, который поможет вам на следующей встрече. (Помните о необходимости клинического мышления)",
-  "card.info.title": "Насколько родитель вовлечён в терапию?",
+  "card.info.title": "Определение вовлечённости родителя",
   "card.info.subtitle": "Определите уровень вовлечённости и получите направление для дальнейших действий.",
-  "card.routine.title": "Как повысить шансы на выполнение?",
+  "card.routine.title": "Как способствовать выполнению домашних рекомендаций?",
   "card.routine.subtitle": "Адаптация рекомендаций к семье",
   "card.strategies.title": "Что можно сделать уже сегодня?",
   "card.strategies.subtitle": "Короткие стратегии для применения на следующей встрече.",
@@ -1921,48 +2008,42 @@ translations.ru = {
   "card.about.title": "Несколько слов от меня",
   "modal.growth.banner": "Сегодня на терапии... чему вы сегодня научились, работая с родителем?",
   "footer.content": "Составлено <strong>Брахой Ягода</strong> в рамках магистратуры по эрготерапии, Еврейский университет в Иерусалиме<br>Руководитель: д-р Нирит Лавон Эрез<br>© Все права защищены",
-  "modal.info.title": "🤔 Насколько родитель вовлечён в терапию?",
-  "modal.info.banner": "Оцените наблюдаемые показатели вовлечённости родителя по каждому аспекту. Система предложит вопросы для размышления и направления действий на основе теории самодетерминации (SDT).",
+  "modal.info.title": "🤔 Определение вовлечённости родителя",
+  "modal.info.banner": "Оцените наблюдаемые показатели вовлечённости родителя по каждому аспекту. Система предложит вопросы для размышления и направления действий на основе модели вовлечённости родителей.",
   "modal.info.quote": "💡 Вовлечённость родителей — это сложный и динамичный процесс, включающий эмоциональные, поведенческие и когнитивные аспекты",
   "modal.info.warning": "⚠️ Пожалуйста, не вводите имена и другие идентифицирующие данные",
   "acc.emotional.title": "Эмоциональный аспект",
-  "acc.emotional.sub": "Интерес, близость, выражение эмоций",
+  "acc.emotional.sub": "Эмоциональная вовлечённость родителя в процесс с терапевтом (вербальная и невербальная).",
   "scale.interest.label": "Интерес",
-  "scale.interest.pos": "Проявляет уместный интерес",
-  "scale.interest.neg": "Безразличие",
+  "scale.interest.pos": "Проявляет уместный интерес и энтузиазм",
+  "scale.interest.neg": "Равнодушие / отсутствие интереса",
   "scale.bodylang.label": "Язык тела",
-  "scale.bodylang.pos": "Открытый и близкий",
-  "scale.bodylang.neg": "Закрытый и отстранённый",
+  "scale.bodylang.pos": "Открытая / тёплая",
+  "scale.bodylang.neg": "Закрытая / отстранённая",
   "scale.hope.label": "Надежда",
-  "scale.hope.pos": "Оптимизм",
-  "scale.hope.neg": "Отчаяние",
-  "scale.generalemotion.label": "Общее эмоциональное состояние",
-  "scale.generalemotion.pos": "Спокоен и горд",
-  "scale.generalemotion.neg": "Гнев / тревога",
+  "scale.hope.pos": "Язык, ориентированный на сильные стороны, оптимизм",
+  "scale.hope.neg": "Отчаяние / безнадёжность",
   "placeholder.emoCtx": "Краткая заметка об эмоциональном аспекте (необязательно)...",
   "acc.cognitive.title": "Когнитивный аспект",
-  "acc.cognitive.sub": "Понимание, убеждённость, ожидания",
-  "scale.belief.label": "Вера в процесс",
-  "scale.belief.pos": "Верит в лечение",
-  "scale.belief.neg": "Выражает сомнения",
+  "acc.cognitive.sub": "Убеждения родителя относительно необходимости и эффективности вмешательства.",
+  "scale.belief.label": "Уверенность",
+  "scale.belief.pos": "Верит в эффективность лечения",
+  "scale.belief.neg": "Сомневается в эффективности",
   "scale.understanding.label": "Понимание",
-  "scale.understanding.pos": "Понимает обоснование",
-  "scale.understanding.neg": "Отсутствие ясности",
-  "scale.questions.label": "Общение через вопросы",
-  "scale.questions.pos": "Спрашивает и исследует",
-  "scale.questions.neg": "Избегает вопросов",
+  "scale.understanding.pos": "Понимает логику лечения",
+  "scale.understanding.neg": "Отсутствие ясности / несоответствие ожиданий",
   "placeholder.cogCtx": "Краткая заметка о когнитивном аспекте (необязательно)...",
   "acc.behavioral.title": "Поведенческий аспект",
-  "acc.behavioral.sub": "Присутствие, инициатива, применение дома",
-  "scale.presence.label": "Присутствие в кабинете",
-  "scale.presence.pos": "Полностью присутствует",
-  "scale.presence.neg": "Отвлекается (телефон и т.д.)",
-  "scale.initiative.label": "Инициатива в разговоре",
-  "scale.initiative.pos": "Вносит вклад и проявляет инициативу",
-  "scale.initiative.neg": "Пассивен и молчалив",
-  "scale.homeimpl.label": "Применение дома",
-  "scale.homeimpl.pos": "Последователен дома",
-  "scale.homeimpl.neg": "Не применяет",
+  "acc.behavioral.sub": "Активное участие в сессии и взаимный вклад в взаимодействие.",
+  "scale.presence.label": "Присутствие",
+  "scale.presence.pos": "Полностью присутствует (без телефона)",
+  "scale.presence.neg": "Использует телефон / опаздывает",
+  "scale.initiative.label": "Инициатива",
+  "scale.initiative.pos": "Проявляет инициативу / выбирает занятия",
+  "scale.initiative.neg": "Пассивен / смотрит в пустоту",
+  "scale.homeimpl.label": "Выполнение",
+  "scale.homeimpl.pos": "Последовательно выполняет дома",
+  "scale.homeimpl.neg": "Не выполняет дома",
   "placeholder.behCtx": "Краткая заметка о поведенческом аспекте (необязательно)...",
   "field.additionalContext.label": "Дополнительный контекст (свободное описание)",
   "placeholder.infoCtx": "Например: отец приходит регулярно, но сидит в стороне с телефоном... Это соответствует действительности?",
@@ -1973,7 +2054,7 @@ translations.ru = {
   "btn.whatsapp": "💬 WhatsApp",
   "btn.print": "🖨️ Печать",
   "modal.routine.title": "🏠 Применение дома",
-  "modal.routine.banner": "Перед завершением сессии остановитесь на минуту и проверьте, действительно ли составленный вами план подходит семье и повышает шансы на его выполнение дома.",
+  "modal.routine.banner": "Перед тем как дать рекомендации для дома, остановитесь на минуту и проверьте, действительно ли составленный вами план подходит семье и повышает шансы на его выполнение дома.",
   "modal.routine.quote": "💡 Родители подчёркивают, что рекомендации легче выполнять, когда они соответствуют повседневному распорядку, просты, практичны и не создают дополнительной нагрузки",
   "loading.routine": "Генерация идей...",
   "res.routine.header": "Итог проверки",
@@ -2071,21 +2152,6 @@ translations.ru = {
   "info.allGood.q1": "Что именно делает эту вовлечённость такой успешной?",
   "info.allGood.q2": "Как это можно сохранить, когда позже возникнут трудности?",
   "info.allGood.suggestion": "Отразите родителю что-то конкретное, что вы видели, как он делает хорошо, чтобы укрепить его чувство компетентности и мотивацию продолжать.",
-  "info.belonging.interpretation": "Самые низкие показатели — в аспекте принадлежности: возможно, родитель чувствует себя менее связанным или менее «своим» в терапевтическом пространстве, а не по-настоящему незаинтересованным.",
-  "info.belonging.q1": "Что могло бы помочь этому родителю почувствовать себя более частью процесса здесь?",
-  "info.belonging.q2": "Как я воспринимаю свои отношения с ним/ней до сих пор?",
-  "info.belonging.q3": "Что мешает мне выстроить большую близость с этим родителем?",
-  "info.belonging.suggestion": "В начале следующей встречи уделите несколько минут неформальному разговору с родителем, не сосредотачиваясь на задаче, чтобы укрепить чувство связи.",
-  "info.autonomy.interpretation": "Самые низкие показатели — в аспекте автономии: возможно, родитель не чувствует, что у него достаточно голоса или выбора в процессе, что может подорвать его внутреннюю мотивацию.",
-  "info.autonomy.q1": "Даю ли я этому родителю достаточно пространства влиять на ход лечения?",
-  "info.autonomy.q2": "Что происходит, когда родитель пытается высказать свою идею или мнение?",
-  "info.autonomy.q3": "Как я могу больше вовлечь его/её в принятие решений?",
-  "info.autonomy.suggestion": "Дайте родителю выбрать между двумя вариантами применения следующей цели дома, чтобы укрепить его чувство выбора.",
-  "info.competence.interpretation": "Самые низкие показатели — в аспекте компетентности: возможно, родитель не уверен в своей способности поддержать ребёнка, что может проявляться как беспокойство, избегание или цинизм по отношению к процессу.",
-  "info.competence.q1": "Что я видела, в чём родитель преуспел, пусть даже в малом?",
-  "info.competence.q2": "Как я могу отражать успехи родителю так, чтобы это укрепляло его уверенность?",
-  "info.competence.q3": "Что помогло бы мне лучше понять, откуда берётся эта неуверенность?",
-  "info.competence.suggestion": "Отразите родителю один небольшой конкретный успех, который вы заметили на встрече, чтобы укрепить его чувство компетентности.",
   "info.emotionalNote": "⚠️ Обратите внимание: родитель выражает заметный эмоциональный дистресс (гнев/тревогу). Возможно, стоит уделить время тому, чтобы вместить эту эмоцию, прежде чем переходить к практической работе.",
   "reflect.header.covered": "✅ Затронутые темы",
   "reflect.header.toConsider": "💭 Вопросы для размышления по темам, которые ещё не были затронуты",
@@ -2136,15 +2202,12 @@ translations.ru = {
   "tip.strat10": "Подчёркивание сильных сторон и маленьких побед было особенно ценным — многие родители не всегда сами замечают медленный прогресс (Grandisson et al., 2023).",
   "tip.strat10.want": "Когда попробуете это: найдите один маленький успех родителя или ребёнка и произнесите его вслух — многие родители не всегда замечают это сами (Grandisson et al., 2023).",
   "info.allGood.researchTip": "Даже когда вовлечённость хороша, стоит продолжать подчёркивать маленькие победы, чтобы поддерживать позитивный процесс (Grandisson et al., 2023).",
-  "info.belonging.researchTip": "Исследования подчёркивают, что вложение в отношения с родителем с самого начала лечения — основа долгосрочной вовлечённости (D'Arrigo et al., 2019).",
   "info.allEqual.interpretation": "Все три аспекта (эмоциональный, когнитивный и поведенческий) были оценены примерно на одном уровне. Это может указывать на то, что вовлечённость родителя стабильна и сбалансирована, а не на то, что есть один конкретный аспект, требующий отдельного внимания.",
   "info.allEqual.q1": "Есть ли конкретная область, в которой я всё же хотела бы увидеть изменения, даже если оценки по аспектам схожи?",
   "info.allEqual.q2": "Как бы я описала мои общие отношения с этим родителем сейчас?",
   "info.allEqual.q3": "Что могло бы укрепить общую картину вовлечённости, а не только один её аспект?",
   "info.allEqual.suggestion": "Поскольку аспекты схожи между собой, стоит сосредоточиться на укреплении общих отношений между родителем и терапевтом — доверии, открытом общении и отзывчивости к меняющимся потребностям, — поскольку это одновременно влияет на все аспекты вовлечённости.",
   "info.allEqual.researchTip": "Вовлечённость родителя состоит из трёх взаимосвязанных аспектов — эмоционального, когнитивного и поведенческого, — которые взаимно влияют друг на друга, поэтому укрепление общих отношений с родителем может принести пользу всем трём сразу (King et al., 2014).",
-  "info.autonomy.researchTip": "Когда родитель не чувствует, что у него достаточно голоса в процессе, подлинный выбор укрепляет его внутреннюю мотивацию (D'Arrigo et al., 2016).",
-  "info.competence.researchTip": "Родители, сообщающие о более сильном чувстве компетентности, часто те, чьи маленькие успехи были подчёркнуты терапевтом (D'Arrigo et al., 2019).",
   "strategy.modeLabel": "Эти стратегии:",
   "strategy.mode.implemented": "Уже применены",
   "strategy.mode.want": "Стратегии, которые я хочу попробовать",
@@ -2214,7 +2277,58 @@ translations.ru = {
   "impl.ease.otherPlaceholder": "Дополнительные идеи для облегчения выполнения (по желанию)...",
   "impl.easeOtherLabel": "Дополнительные идеи:",
   "video5.title": "Ключ к вовлечённости родителей",
-  "modal.info.clinicalNote": "Помните, что клиническое суждение следует применять в любом случае"
+  "modal.info.clinicalNote": "Помните, что клиническое суждение следует применять в любом случае",
+  "scale.emotion.label": "Эмоция",
+  "scale.emotion.pos": "Счастлив, спокоен, гордится усилиями ребёнка",
+  "scale.emotion.neg": "Испытывает гнев, тревогу, отчаяние",
+  "scale.connection.label": "Связь",
+  "scale.connection.pos": "Тёплое взаимодействие",
+  "scale.connection.neg": "Отсутствие доверия / не чувствует признания",
+  "scale.cogimpl.label": "Выполнение",
+  "scale.cogimpl.pos": "Помнит и применяет домашние рекомендации",
+  "scale.cogimpl.neg": "Не помнит и не применяет домашние рекомендации",
+  "scale.communication.label": "Общение",
+  "scale.communication.pos": "Задаёт уточняющие вопросы",
+  "scale.communication.neg": "Избегает вопросов / не реагирует",
+  "scale.expectations.label": "Ожидания",
+  "scale.expectations.pos": "Согласованные ожидания",
+  "scale.expectations.neg": "Модель «исправления» — ожидает, что терапевт всё исправит",
+  "scale.dialogue.label": "Диалог",
+  "scale.dialogue.pos": "Вносит вклад в разговор в реальном времени",
+  "scale.dialogue.neg": "Отвечает коротко / молчит",
+  "scale.behaviorfit.label": "Поведение",
+  "scale.behaviorfit.pos": "Проявляет подходящее поведение и интерес",
+  "scale.behaviorfit.neg": "Проявляет неподходящее поведение и интерес",
+  "info.emotional.interpretation": "Самые низкие показатели появляются в эмоциональном аспекте — родитель, возможно, ещё не выстроил чувство доверия, надежды или эмоциональной связи с процессом и терапевтом, что может повлиять на его готовность вкладываться (King et al., 2014).",
+  "info.emotional.q1": "Что родитель чувствует ко мне и к процессу сейчас?",
+  "info.emotional.q2": "Что могло бы укрепить его чувство доверия и надежды?",
+  "info.emotional.q3": "Есть ли что-то, что вызывает у него тревогу, гнев или отчаяние?",
+  "info.emotional.suggestion": "Уделите несколько минут неформальному разговору с родителем и отразите ему позитивный момент, который вы заметили, чтобы укрепить его чувство доверия и надежды.",
+  "info.emotional.researchTip": "Чувство надежды, доверие к процессу и доверие к терапевту являются центральными в оптимальном состоянии вовлечённости родителей (King et al., 2014).",
+  "info.cognitive.interpretation": "Самые низкие показатели появляются в когнитивном аспекте — родитель, возможно, ещё не убеждён в эффективности вмешательства или ему не хватает ясности относительно логики и ожиданий, что может ослабить его приверженность (King et al., 2014).",
+  "info.cognitive.q1": "Действительно ли родитель понимает, почему мы делаем то, что делаем?",
+  "info.cognitive.q2": "Соответствуют ли его ожидания от процесса тому, что реалистично ожидать?",
+  "info.cognitive.q3": "Что могло бы укрепить его веру в эффективность вмешательства?",
+  "info.cognitive.suggestion": "Кратко объясните логику следующего занятия и проверьте с родителем, совпадают ли взаимные ожидания.",
+  "info.cognitive.researchTip": "Уверенность в том, что вмешательство необходимо и будет эффективным (убеждённость), оказалась центральным компонентом оптимальной вовлечённости родителей (King et al., 2014).",
+  "info.behavioral.interpretation": "Самые низкие показатели появляются в поведенческом аспекте — родителю, возможно, всё ещё трудно активно участвовать в сессии или выполнять рекомендации дома, что может отражать более низкое чувство компетентности (King et al., 2014; D'Arrigo et al., 2020).",
+  "info.behavioral.q1": "Что мешает родителю быть более активным участником сессии?",
+  "info.behavioral.q2": "Чувствует ли родитель, что он действительно способен выполнять рекомендованное дома?",
+  "info.behavioral.q3": "Какой небольшой успех мог бы укрепить его чувство компетентности?",
+  "info.behavioral.suggestion": "Дайте родителю активную, конкретную роль на следующей сессии, чтобы укрепить его чувство компетентности и участия.",
+  "info.behavioral.researchTip": "Чувство компетентности для выполнения рекомендованного (самоэффективность) оказался одним из трёх ключевых компонентов оптимальной вовлечённости родителей (King et al., 2014).",
+  "info.initial.label": "Первая буква имени ребёнка",
+  "info.initial.placeholder": "напр., А",
+  "btn.saveInfo": "💾 Сохранить",
+  "alert.infoSaveRequired": "Пожалуйста, отметьте хотя бы один показатель или напишите заметку, и введите первую букву имени ребёнка перед сохранением.",
+  "info.pastTitle": "📚 Предыдущие оценки",
+  "strategy.trackingNote": "Вы можете отметить стратегии, которые уже применили или планируете применить, и сохранить это для отслеживания со временем.",
+  "strategy.belongingCtx.placeholder": "Дополнительный свободный текст для принадлежности (по желанию)...",
+  "strategy.autonomyCtx.placeholder": "Дополнительный свободный текст для автономии (по желанию)...",
+  "strategy.competenceCtx.placeholder": "Дополнительный свободный текст для компетентности (по желанию)...",
+  "info.group.emotional": "Эмоциональная вовлечённость",
+  "info.group.cognitive": "Когнитивная вовлечённость",
+  "info.group.behavioral": "Поведенческая вовлечённость"
 };
 
 translations.ar = {
@@ -2225,9 +2339,9 @@ translations.ar = {
   "hero.quote": "تسهم مشاركة الوالدين في نجاح العلاج، وتحسين أداء الطفل، وترسيخ التوصيات في الحياة اليومية.",
   "section.title": "أدوات قصيرة وعملية لتعزيز مشاركة الوالدين في العلاج.",
   "section.subtitle": "مرحبًا بكِ! اختاري الأداة التي يمكن أن تساعدكِ في الجلسة القادمة. (تذكري ضرورة إعمال التفكير السريري)",
-  "card.info.title": "إلى أي مدى يشارك الوالد في العلاج؟",
+  "card.info.title": "تحديد مشاركة الوالد",
   "card.info.subtitle": "حددي مستوى المشاركة واحصلي على توجيه للخطوات التالية.",
-  "card.routine.title": "كيف يمكننا زيادة فرصة التطبيق؟",
+  "card.routine.title": "كيف يمكننا تعزيز تطبيق التوجيه في المنزل؟",
   "card.routine.subtitle": "تكييف التوجيه مع الأسرة",
   "card.strategies.title": "ما الذي يمكن فعله اليوم؟",
   "card.strategies.subtitle": "استراتيجيات قصيرة للتطبيق في الجلسة القادمة.",
@@ -2240,48 +2354,42 @@ translations.ar = {
   "card.about.title": "كلمات قليلة مني",
   "modal.growth.banner": "اليوم في العلاج.. ماذا تعلمتِ اليوم من العمل مع الوالد؟",
   "footer.content": "أُعدّت بواسطة <strong>براخا ياجودة</strong> في إطار درجة الماجستير في العلاج الوظيفي، الجامعة العبرية في القدس<br>المشرفة: د. نيريت لافون إيريز<br>© جميع الحقوق محفوظة",
-  "modal.info.title": "🤔 إلى أي مدى يشارك الوالد في العلاج؟",
-  "modal.info.banner": "قيّمي مؤشرات المشاركة المُلاحَظة لدى الوالد في كل بُعد. سيقترح النظام أسئلة للتفكير واتجاهات للعمل استنادًا إلى نظرية تقرير المصير (SDT).",
+  "modal.info.title": "🤔 تحديد مشاركة الوالد",
+  "modal.info.banner": "قيّمي مؤشرات المشاركة الملاحظة لدى الوالد في كل بعد. سيقترح النظام أسئلة للتفكير واتجاهات للعمل استنادًا إلى نموذج مشاركة الوالدين.",
   "modal.info.quote": "💡 مشاركة الوالدين عملية معقدة وديناميكية تشمل جوانب عاطفية وسلوكية ومعرفية",
   "modal.info.warning": "⚠️ يُرجى عدم إدخال أسماء أو تفاصيل تعريفية",
   "acc.emotional.title": "الجانب العاطفي",
-  "acc.emotional.sub": "الاهتمام، القرب، التعبير العاطفي",
+  "acc.emotional.sub": "استثمار الوالد العاطفي في العملية مع المعالج (لفظيًا وغير لفظي).",
   "scale.interest.label": "الاهتمام",
-  "scale.interest.pos": "يُظهر اهتمامًا مناسبًا",
-  "scale.interest.neg": "لامبالاة",
+  "scale.interest.pos": "يُظهر اهتمامًا وحماسًا مناسبًا",
+  "scale.interest.neg": "لامبالاة / قلة اهتمام",
   "scale.bodylang.label": "لغة الجسد",
-  "scale.bodylang.pos": "منفتحة وقريبة",
-  "scale.bodylang.neg": "منغلقة وبعيدة",
+  "scale.bodylang.pos": "منفتحة / دافئة",
+  "scale.bodylang.neg": "منغلقة / بعيدة",
   "scale.hope.label": "الأمل",
-  "scale.hope.pos": "تفاؤل",
-  "scale.hope.neg": "يأس",
-  "scale.generalemotion.label": "الحالة الانفعالية العامة",
-  "scale.generalemotion.pos": "هادئ وفخور",
-  "scale.generalemotion.neg": "غضب / قلق",
+  "scale.hope.pos": "لغة تركز على نقاط القوة، تفاؤل",
+  "scale.hope.neg": "يأس / فقدان الأمل",
   "placeholder.emoCtx": "ملاحظة قصيرة حول الجانب العاطفي (اختياري)...",
   "acc.cognitive.title": "الجانب المعرفي",
-  "acc.cognitive.sub": "الفهم، الاعتقاد، التوقعات",
-  "scale.belief.label": "الإيمان بالعملية العلاجية",
-  "scale.belief.pos": "يؤمن بالعلاج",
-  "scale.belief.neg": "يُبدي شكوكًا",
+  "acc.cognitive.sub": "معتقدات الوالد حول الحاجة إلى التدخل وفعاليته.",
+  "scale.belief.label": "الإيمان",
+  "scale.belief.pos": "تؤمن بفعالية العلاج",
+  "scale.belief.neg": "شكوك في الفعالية",
   "scale.understanding.label": "الفهم",
-  "scale.understanding.pos": "يفهم المنطق الكامن",
-  "scale.understanding.neg": "غياب الوضوح",
-  "scale.questions.label": "التواصل بالأسئلة",
-  "scale.questions.pos": "يسأل ويستفسر",
-  "scale.questions.neg": "يتجنب الأسئلة",
+  "scale.understanding.pos": "تفهم المنطق",
+  "scale.understanding.neg": "عدم وضوح / توقعات غير متطابقة",
   "placeholder.cogCtx": "ملاحظة قصيرة حول الجانب المعرفي (اختياري)...",
   "acc.behavioral.title": "الجانب السلوكي",
-  "acc.behavioral.sub": "الحضور، المبادرة، التطبيق في المنزل",
-  "scale.presence.label": "الحضور في الغرفة",
-  "scale.presence.pos": "حاضر بالكامل",
-  "scale.presence.neg": "مُشتَّت (الهاتف وغيره)",
-  "scale.initiative.label": "المبادرة في الحوار",
-  "scale.initiative.pos": "يساهم ويبادر",
-  "scale.initiative.neg": "سلبي وصامت",
-  "scale.homeimpl.label": "التطبيق في المنزل",
-  "scale.homeimpl.pos": "منتظم في المنزل",
-  "scale.homeimpl.neg": "لا يُطبّق",
+  "acc.behavioral.sub": "المشاركة الفعالة في الجلسة والمساهمة المتبادلة في التفاعل.",
+  "scale.presence.label": "الحضور",
+  "scale.presence.pos": "حاضرة بالكامل (بدون هاتف)",
+  "scale.presence.neg": "استخدام الهاتف / التأخر عن المواعيد",
+  "scale.initiative.label": "المبادرة",
+  "scale.initiative.pos": "تبادر بالتفاعل / تختار الأنشطة",
+  "scale.initiative.neg": "سلبية / تحدق بدون اهتمام",
+  "scale.homeimpl.label": "التطبيق",
+  "scale.homeimpl.pos": "تطبق بانتظام في المنزل",
+  "scale.homeimpl.neg": "لا تطبق في المنزل",
   "placeholder.behCtx": "ملاحظة قصيرة حول الجانب السلوكي (اختياري)...",
   "field.additionalContext.label": "سياق إضافي (وصف حر)",
   "placeholder.infoCtx": "مثال: الأب يحضر بانتظام لكنه يجلس جانبًا منشغلًا بهاتفه... هل هذا مطابق؟",
@@ -2292,7 +2400,7 @@ translations.ar = {
   "btn.whatsapp": "💬 واتساب",
   "btn.print": "🖨️ طباعة",
   "modal.routine.title": "🏠 التطبيق في المنزل",
-  "modal.routine.banner": "قبل إنهاء الجلسة، توقفي للحظة وتحققي مما إذا كانت الخطة التي بنيتِها تناسب الأسرة فعلاً وتزيد من فرصة تطبيقها في المنزل.",
+  "modal.routine.banner": "قبل تقديم التوجيه المنزلي، توقفي للحظة وتحققي مما إذا كانت الخطة التي بنيتِها تناسب الأسرة فعلاً وتزيد من فرصة تطبيقها في المنزل.",
   "modal.routine.quote": "💡 يؤكد الأهل أن تطبيق التوصيات أسهل عندما تتناسب مع روتين الحياة، وتكون بسيطة وعملية ولا تُشكّل عبئًا إضافيًا",
   "loading.routine": "جارٍ توليد الأفكار...",
   "res.routine.header": "ملخص الفحص",
@@ -2390,21 +2498,6 @@ translations.ar = {
   "info.allGood.q1": "ما الذي يجعل هذه المشاركة تعمل بشكل جيد بالضبط؟",
   "info.allGood.q2": "كيف يمكن الحفاظ على ذلك حتى عند ظهور تحديات لاحقًا؟",
   "info.allGood.suggestion": "اعكسي للوالد شيئًا ملموسًا رأيتِه يفعله بشكل جيد، لتعزيز شعوره بالكفاءة ودافعيته للاستمرار.",
-  "info.belonging.interpretation": "تظهر أدنى الدرجات في بُعد الانتماء — قد يشعر الوالد بأنه أقل ارتباطًا أو أقل «انتماءً» للمساحة العلاجية، وليس بالضرورة أنه غير مهتم فعليًا.",
-  "info.belonging.q1": "ما الذي قد يساعد هذا الوالد على الشعور بأنه جزء أكبر من العملية هنا؟",
-  "info.belonging.q2": "كيف أعيش علاقتي معه/معها حتى الآن؟",
-  "info.belonging.q3": "ما الذي يمنعني من بناء قرب أكبر مع هذا الوالد؟",
-  "info.belonging.suggestion": "في بداية الجلسة القادمة، خصّصي بضع دقائق لمحادثة غير رسمية مع الوالد، دون التركيز على المهمة، لتعزيز الشعور بالارتباط.",
-  "info.autonomy.interpretation": "تظهر أدنى الدرجات في بُعد الاستقلالية — قد لا يشعر الوالد بأن لديه صوتًا أو خيارًا كافيًا في العملية، ما قد يضعف دافعيته الداخلية.",
-  "info.autonomy.q1": "هل أعطي هذا الوالد مساحة كافية للتأثير في سير العلاج؟",
-  "info.autonomy.q2": "ماذا يحدث عندما يحاول الوالد طرح فكرة أو رأي خاص به؟",
-  "info.autonomy.q3": "كيف يمكنني إشراكه/إشراكها أكثر في اتخاذ القرارات؟",
-  "info.autonomy.suggestion": "دعي الوالد يختار بين خيارين لتطبيق الهدف القادم في المنزل، لتعزيز شعوره بالاختيار.",
-  "info.competence.interpretation": "تظهر أدنى الدرجات في بُعد الكفاءة — قد يشعر الوالد بعدم اليقين من قدرته على دعم الطفل، وقد يظهر ذلك كقلق أو تجنب أو تشكيك تجاه العملية.",
-  "info.competence.q1": "ما الذي رأيتُ الوالد ينجح فيه، حتى لو كان أمرًا صغيرًا؟",
-  "info.competence.q2": "كيف يمكنني أن أعكس النجاحات للوالد بطريقة تعزز ثقته؟",
-  "info.competence.q3": "ما الذي قد يساعدني على فهم مصدر انعدام الثقة هذا بشكل أفضل؟",
-  "info.competence.suggestion": "اعكسي للوالد نجاحًا صغيرًا وملموسًا لاحظتِه خلال الجلسة، لتعزيز شعوره بالكفاءة.",
   "info.emotionalNote": "⚠️ تنبيه: يُظهر الوالد ضائقة عاطفية ملحوظة (غضب/قلق). قد يكون من المفيد تخصيص وقت لاحتواء هذا الشعور قبل الانتقال إلى العمل العملي.",
   "reflect.header.covered": "✅ المواضيع التي تناولتِها",
   "reflect.header.toConsider": "💭 أسئلة للتفكير حول مواضيع لم تُطرح بعد",
@@ -2455,15 +2548,12 @@ translations.ar = {
   "tip.strat10": "كان إبراز نقاط القوة والانتصارات الصغيرة قيّمًا بشكل خاص - كثير من الوالدين لا يلاحظون دائمًا التقدم البطيء بأنفسهم (Grandisson et al., 2023).",
   "tip.strat10.want": "عندما تجربين هذا: ابحثي عن نجاح صغير واحد للوالد أو الطفل وقوليه بصوت عالٍ — كثير من الوالدين لا يلاحظون ذلك دائمًا بأنفسهم (Grandisson et al., 2023).",
   "info.allGood.researchTip": "حتى عندما تكون المشاركة جيدة، يستحق الأمر الاستمرار في إبراز الانتصارات الصغيرة للحفاظ على العملية الإيجابية (Grandisson et al., 2023).",
-  "info.belonging.researchTip": "تؤكد الأبحاث أن الاستثمار في العلاقة مع الوالد منذ بداية العلاج هو أساس المشاركة على المدى الطويل (D'Arrigo et al., 2019).",
   "info.allEqual.interpretation": "تم تقييم الأبعاد الثلاثة (العاطفي والمعرفي والسلوكي) على مستوى متقارب تقريبًا. قد يشير هذا إلى أن مشاركة الوالد ثابتة ومتوازنة، وليس إلى وجود مجال معين يحتاج إلى اهتمام منفصل.",
   "info.allEqual.q1": "هل هناك مجال معين ما زلت أرغب في رؤية تغيير فيه، حتى لو كانت الدرجات متشابهة بين الأبعاد؟",
   "info.allEqual.q2": "كيف أصف علاقتي العامة مع هذا الوالد في الوقت الحالي؟",
   "info.allEqual.q3": "ما الذي يمكن أن يعزز الصورة العامة للمشاركة، وليس فقط بُعدًا واحدًا منها؟",
   "info.allEqual.suggestion": "بما أن الأبعاد متشابهة مع بعضها البعض، يستحق الأمر التركيز على تعزيز العلاقة العامة بين الوالد والمعالجة، الثقة والتواصل المفتوح والتجاوب مع الاحتياجات المتغيرة، لأن ذلك يؤثر على جميع جوانب المشاركة في آن واحد.",
   "info.allEqual.researchTip": "تتكون مشاركة الوالد من ثلاثة أبعاد مترابطة، عاطفي ومعرفي وسلوكي، تؤثر على بعضها البعض بشكل متبادل، لذا فإن تعزيز العلاقة العامة مع الوالد يمكن أن يفيد الأبعاد الثلاثة معًا (King et al., 2014).",
-  "info.autonomy.researchTip": "عندما لا يشعر الوالد بأن لديه صوتًا كافيًا في العملية، وُجد أن الاختيار الحقيقي يعزز دافعيته الداخلية (D'Arrigo et al., 2016).",
-  "info.competence.researchTip": "غالبًا ما يكون الوالدون الذين يُفيدون بشعور أقوى بالكفاءة هم أولئك الذين أبرزت المعالجة نجاحاتهم الصغيرة (D'Arrigo et al., 2019).",
   "strategy.modeLabel": "هل هذه الاستراتيجيات:",
   "strategy.mode.implemented": "مطبَّقة بالفعل",
   "strategy.mode.want": "استراتيجيات أرغب في تجربتها",
@@ -2533,7 +2623,58 @@ translations.ar = {
   "impl.ease.otherPlaceholder": "أفكار إضافية لتسهيل التطبيق (اختياري)...",
   "impl.easeOtherLabel": "أفكار إضافية:",
   "video5.title": "مفتاح مشاركة الوالدين",
-  "modal.info.clinicalNote": "تذكري أنه يجب دائمًا تفعيل التفكير الإكلينيكي"
+  "modal.info.clinicalNote": "تذكري أنه يجب دائمًا تفعيل التفكير الإكلينيكي",
+  "scale.emotion.label": "الشعور",
+  "scale.emotion.pos": "سعيدة، هادئة، فخورة بجهد الطفل",
+  "scale.emotion.neg": "تشعر بالغضب والقلق واليأس",
+  "scale.connection.label": "التواصل",
+  "scale.connection.pos": "تفاعل دافئ",
+  "scale.connection.neg": "عدم ثقة / لا تشعر بالتقدير",
+  "scale.cogimpl.label": "التطبيق",
+  "scale.cogimpl.pos": "تتذكر وتطبق التوجيهات المنزلية",
+  "scale.cogimpl.neg": "لا تتذكر ولا تطبق التوجيهات المنزلية",
+  "scale.communication.label": "التواصل",
+  "scale.communication.pos": "تطرح أسئلة للتوضيح",
+  "scale.communication.neg": "تتجنب الأسئلة / لا تستجيب",
+  "scale.expectations.label": "التوقعات",
+  "scale.expectations.pos": "توقعات متطابقة",
+  "scale.expectations.neg": "نموذج «الإصلاح» — تتوقع أن يقوم المعالج بالإصلاح",
+  "scale.dialogue.label": "الحوار",
+  "scale.dialogue.pos": "تسهم في الحوار المباشر",
+  "scale.dialogue.neg": "تجيب باختصار / صامتة",
+  "scale.behaviorfit.label": "السلوك",
+  "scale.behaviorfit.pos": "تظهر سلوكًا واهتمامًا مناسبًا",
+  "scale.behaviorfit.neg": "تظهر سلوكًا واهتمامًا غير مناسبين",
+  "info.emotional.interpretation": "تظهر أدنى الدرجات في البعد العاطفي — ربما لم يبنِ الوالد بعد شعورًا بالثقة أو الأمل أو التواصل العاطفي تجاه العملية والمعالج، مما قد يؤثر على استعداده للاستثمار (King et al., 2014).",
+  "info.emotional.q1": "بماذا يشعر الوالد تجاهي وتجاه العملية الآن؟",
+  "info.emotional.q2": "ما الذي يمكن أن يعزز شعوره بالثقة والأمل؟",
+  "info.emotional.q3": "هل هناك شيء يجعله يشعر بالقلق أو الغضب أو اليأس؟",
+  "info.emotional.suggestion": "خصصي بضع الدقائق لمحادثة غير رسمية مع الوالد واعكسي له نقطة إيجابية لاحظتها، لتعزيز شعوره بالثقة والأمل.",
+  "info.emotional.researchTip": "يعد الشعور بالأمل والثقة بالعملية والثقة بالمعالج جزءًا مركزيًا من الحالة المثلى لمشاركة الوالدين (King et al., 2014).",
+  "info.cognitive.interpretation": "تظهر أدنى الدرجات في البعد المعرفي — ربما لم يقتنع الوالد بعد بفعالية التدخل، أو يفتقر إلى الوضوح بشأن المنطق والتوقعات، مما قد يضعف التزامه (King et al., 2014).",
+  "info.cognitive.q1": "هل يفهم الوالد حقًا لماذا نقوم بما نقوم به؟",
+  "info.cognitive.q2": "هل تتطابق توقعاته من العملية مع ما هو واقعي وممكن توقعه؟",
+  "info.cognitive.q3": "ما الذي قد يعزز ثقته بفعالية التدخل؟",
+  "info.cognitive.suggestion": "اشرحي باختصار المنطق وراء النشاط التالي وتحققي مع الوالد من تطابق التوقعات المتبادلة.",
+  "info.cognitive.researchTip": "وجد أن الإيمان بأن التدخل ضروري وسيكون فعّالًا (القناعة) مكوّنًا مركزيًا لمشاركة الوالدين المثلى (King et al., 2014).",
+  "info.behavioral.interpretation": "تظهر أدنى الدرجات في البعد السلوكي — ربما لا يزال الوالد يواجه صعوبة في المشاركة الفعالة في الجلسة أو التطبيق في المنزل، مما قد يعكس شعورًا أقل بالكفاءة (King et al., 2014; D'Arrigo et al., 2020).",
+  "info.behavioral.q1": "ما الذي يمنع الوالد من أن يكون شريكًا أكثر فاعلية في الجلسة؟",
+  "info.behavioral.q2": "هل يشعر الوالد أنه قادر فعلًا على تطبيق الموصى به في المنزل؟",
+  "info.behavioral.q3": "ما النجاح الصغير الذي قد يعزز شعوره بالكفاءة؟",
+  "info.behavioral.suggestion": "امنحي الوالد دورًا فعّالًا وملموسًا ضمن الجلسة القادمة، لتعزيز شعوره بالكفاءة والمشاركة.",
+  "info.behavioral.researchTip": "وجد أن الشعور بالكفاءة لتطبيق ما هو موصى به (الكفاءة الذاتية) واحد من المكوّنات الثلاث الأساسية لمشاركة الوالدين المثلى (King et al., 2014).",
+  "info.initial.label": "الحرف الأول من اسم الطفل",
+  "info.initial.placeholder": "مثال: أ",
+  "btn.saveInfo": "💾 حفظ",
+  "alert.infoSaveRequired": "يرجى تحديد مؤشر واحد على الأقل أو كتابة ملاحظة، وإدخال الحرف الأول من اسم الطفل، قبل الحفظ.",
+  "info.pastTitle": "📚 تقييمات سابقة",
+  "strategy.trackingNote": "يمكنك تحديد الاستراتيجيات التي طبقتِها بالفعل أو تنوين تطبيقها، وحفظ ذلك لمتابعتها مع مرور الوقت.",
+  "strategy.belongingCtx.placeholder": "نص حر إضافي للانتماء (اختياري)...",
+  "strategy.autonomyCtx.placeholder": "نص حر إضافي للاستقلالية (اختياري)...",
+  "strategy.competenceCtx.placeholder": "نص حر إضافي للكفاءة (اختياري)...",
+  "info.group.emotional": "المشاركة العاطفية",
+  "info.group.cognitive": "المشاركة المعرفية",
+  "info.group.behavioral": "المشاركة السلوكية"
 };
 
 translations.yi = {
@@ -2544,9 +2685,9 @@ translations.yi = {
   "hero.quote": "עלטערן־באַטייליקונג טראָגט בײַ צום דערפֿאָלג פֿון דער טעראַפּיע, פֿאַרבעסערט דעם קינדס פֿונקציאָנירן און העלפֿט אַרײַנפֿירן די עצות אין טאָג־טעגלעכן לעבן.",
   "section.title": "קורצע און פּראַקטישע געצײַגן צו שטאַרקן עלטערן־באַטייליקונג אין דער טעראַפּיע.",
   "section.subtitle": "ברוכים־הבאים! קלײַב אויס דעם געצײַג וואָס קען העלפֿן דיר אין דער קומענדיקער זיצונג. (געדענק צו נוצן קליניש טראַכטן)",
-  "card.info.title": "ווי אַזוי איז דער עלטער באַטייליקט אין דער טעראַפּיע?",
+  "card.info.title": "אידענטיפֿיצירן עלטערן־באַטייליקונג",
   "card.info.subtitle": "דערקען דעם מדרגה פֿון באַטייליקונג און באַקום אַ ריכטונג ווײַטער.",
-  "card.routine.title": "ווי אַזוי קענען מיר פֿאַרגרעסערן די שאַנס פֿאַר אויספֿירונג?",
+  "card.routine.title": "ווי אַזוי קענען מיר העלפֿן אויספֿירן די היים־אָנווײַזונג?",
   "card.routine.subtitle": "צופּאַסן די אָנווײַזונג צו דער משפּחה",
   "card.strategies.title": "וואָס קען מען טאָן שוין הײַנט?",
   "card.strategies.subtitle": "קורצע סטראַטעגיעס צו נוצן אין דער קומענדיקער זיצונג.",
@@ -2559,48 +2700,42 @@ translations.yi = {
   "card.about.title": "עטלעכע ווערטער פֿון מיר",
   "modal.growth.banner": "הײַנט אין דער טעראַפּיע.. וואָס האָסטו הײַנט געלערנט פֿון דער אַרבעט מיטן עלטער?",
   "footer.content": "צונויפֿגעשטעלט פֿון <strong>ברכה יגודה</strong> אין ראַמען פֿון אַ מאַגיסטער אין אָקופּאַציאָנעלער טעראַפּיע, די העברעיִשע אוניווערסיטעט<br>מדריכה: ד״ר נירית לבֿנון ארז<br>© אַלע רעכט פֿאַרבאַהאַלטן",
-  "modal.info.title": "🤔 ווי אַזוי איז דער עלטער באַטייליקט אין דער טעראַפּיע?",
-  "modal.info.banner": "שאַץ אָפּ די באַמערקטע סימנים פֿון באַטייליקונג בײַם עלטער אין יעדער בחינה. דאָס סיסטעם וועט פֿאָרשלאָגן פֿראַגעס צום טראַכטן און ריכטונגען לויט דער תּיאָריע פֿון זעלבסט־באַשטימונג (SDT).",
+  "modal.info.title": "🤔 אידענטיפֿיצירן עלטערן־באַטייליקונג",
+  "modal.info.banner": "שאַץ אָפּ די באַמערקטע סימנים פֿון באַטייליקונג בײַם עלטער אין יעדער בחינה. דאָס סיסטעם וועט פֿאָרשלאָגן פֿראַגעס צום טראַכטן און ריכטונגען לויט דעם מאָדעל פֿון עלטערן־באַטייליקונג.",
   "modal.info.quote": "💡 עלטערן־באַטייליקונג איז אַ קאָמפּליצירטער און דינאַמישער פּראָצעס וואָס נעמט אַרײַן עמאָציאָנעלע, פֿאַרהאַלטנס־מעסיקע און קאָגניטיווע צדדים",
   "modal.info.warning": "⚠️ ביטע שרײַב נישט קיין נעמען אָדער אידענטיפֿיצירנדע פּרטים",
   "acc.emotional.title": "עמאָציאָנעלער צד",
-  "acc.emotional.sub": "אינטערעס, נאָענטקייט, עמאָציאָנעלער אויסדרוק",
+  "acc.emotional.sub": "דעם עלטערנס עמאָציאָנעלע אינוועסטירונג אין דעם פּראָצעס מיטן טעראַפּיסט (מילותדיק און נישט־מילותדיק).",
   "scale.interest.label": "אינטערעס",
-  "scale.interest.pos": "ווײַזט אָנפּאַסיקן אינטערעס",
-  "scale.interest.neg": "גלײַכגילטיקייט",
+  "scale.interest.pos": "ווײַזט אָנגעמעסענעם אינטערעס און באַגײַסטערונג",
+  "scale.interest.neg": "גלײַכגילטיקייט / מאַנגל פֿון אינטערעס",
   "scale.bodylang.label": "גוף־שפּראַך",
-  "scale.bodylang.pos": "אָפֿן און נאָענט",
-  "scale.bodylang.neg": "פֿאַרמאַכט און ווײַט",
+  "scale.bodylang.pos": "אָפֿן / וואַרעם",
+  "scale.bodylang.neg": "פֿאַרמאַכט / ווײַט",
   "scale.hope.label": "האָפֿענונג",
-  "scale.hope.pos": "אָפּטימיזם",
-  "scale.hope.neg": "ייִאוש",
-  "scale.generalemotion.label": "אַלגעמיינע שטימונג",
-  "scale.generalemotion.pos": "רויִק און שטאָלץ",
-  "scale.generalemotion.neg": "כּעס / אומרו",
+  "scale.hope.pos": "שפּראַך אָנגעווענדט אויף כּוחות, אָפּטימיזם",
+  "scale.hope.neg": "ייִאוש / חוסר תּקווה",
   "placeholder.emoCtx": "אַ קורצער נאָטיץ וועגן דעם עמאָציאָנעלן צד (נישט־פֿליכטיק)...",
   "acc.cognitive.title": "קאָגניטיווער צד",
-  "acc.cognitive.sub": "פֿאַרשטאַנד, גלויבן, דערוואַרטונגען",
-  "scale.belief.label": "גלויבן אין דעם פּראָצעס",
-  "scale.belief.pos": "גלויבט אין דער טעראַפּיע",
-  "scale.belief.neg": "ווײַזט ספֿקות",
+  "acc.cognitive.sub": "דעם עלטערנס גלויבן וועגן דער נייטיקייט און עפֿעקטיוויטעט פֿון דער אינטערווענציע.",
+  "scale.belief.label": "אמונה",
+  "scale.belief.pos": "גלייבט אין דער עפֿעקטיוויטעט פֿון דער טעראַפּיע",
+  "scale.belief.neg": "האָט ספֿקות וועגן עפֿעקטיוויטעט",
   "scale.understanding.label": "פֿאַרשטאַנד",
-  "scale.understanding.pos": "פֿאַרשטייט דעם טעם",
-  "scale.understanding.neg": "מאַנגל פֿון קלאָרקייט",
-  "scale.questions.label": "קאָמוניקאַציע דורך פֿראַגעס",
-  "scale.questions.pos": "פֿרעגט און פֿאָרשט",
-  "scale.questions.neg": "מײַדט אויס פֿראַגעס",
+  "scale.understanding.pos": "פֿאַרשטייט דעם רציונל",
+  "scale.understanding.neg": "מאַנגל פֿון קלאָרקייט / נישט־צוגעפּאַסטע דערוואַרטונגען",
   "placeholder.cogCtx": "אַ קורצער נאָטיץ וועגן דעם קאָגניטיוון צד (נישט־פֿליכטיק)...",
   "acc.behavioral.title": "פֿאַרהאַלטנס־צד",
-  "acc.behavioral.sub": "אָנוועזנהייט, איניציאַטיוו, אָנווענדונג אין דער היים",
-  "scale.presence.label": "אָנוועזנהייט אין צימער",
-  "scale.presence.pos": "גאָר אָנוועזנד",
-  "scale.presence.neg": "צעטראָגן (טעלעפֿאָן אאַז״וו)",
-  "scale.initiative.label": "איניציאַטיוו אין שמועס",
-  "scale.initiative.pos": "טרעגט בײַ און נעמט איניציאַטיוו",
-  "scale.initiative.neg": "פּאַסיוו און שטיל",
-  "scale.homeimpl.label": "אָנווענדונג אין דער היים",
-  "scale.homeimpl.pos": "קאָנסעקווענט אין דער היים",
-  "scale.homeimpl.neg": "נוצט נישט אויס",
+  "acc.behavioral.sub": "אַקטיווע באַטייליקונג אין דער זיצונג און בעדערזײַטיקער בײַטראָג צו דער אינטעראַקציע.",
+  "scale.presence.label": "אָנוועזנקייט",
+  "scale.presence.pos": "פֿול אָנוועזנד (אָן טעלעפֿאָן)",
+  "scale.presence.neg": "ניצט דעם טעלעפֿאָן / קומט שפּעט",
+  "scale.initiative.label": "יוזמה",
+  "scale.initiative.pos": "נעמט יוזמה / קלײַבט אויס אַקטיוויטעטן",
+  "scale.initiative.neg": "פּאַסיוו / קוקט לעדיק",
+  "scale.homeimpl.label": "אויספֿירונג",
+  "scale.homeimpl.pos": "פֿירט אויס קאָנסיסטענט אין דער היים",
+  "scale.homeimpl.neg": "פֿירט נישט אויס אין דער היים",
   "placeholder.behCtx": "אַ קורצער נאָטיץ וועגן דעם פֿאַרהאַלטנס־צד (נישט־פֿליכטיק)...",
   "field.additionalContext.label": "נאָך אַ קאָנטעקסט (פֿרײַע באַשרײַבונג)",
   "placeholder.infoCtx": "למשל: דער טאַטע קומט קבוע אָבער זיצט אַ זײַט מיטן טעלעפֿאָן... שטימט דאָס?",
@@ -2611,7 +2746,7 @@ translations.yi = {
   "btn.whatsapp": "💬 וואַטסאַפּ",
   "btn.print": "🖨️ דרוק",
   "modal.routine.title": "🏠 אַרײַנפֿירן אין דער היים",
-  "modal.routine.banner": "איידער מ׳ענדיקט די זיצונג, האַלט אָפּ אַ רגע און קוק איבער צי דער פּלאַן וואָס דו האָסט געבויט טאַקע פּאַסט צו דער משפּחה און פֿאַרגרעסערט די שאַנס אַז ער וועט זײַן אויסגעפֿירט אין דער היים.",
+  "modal.routine.banner": "איידער מ׳גיט די היים־אָנווײַזונג, האַלט אָפּ אַ רגע און קוק איבער צי דער פּלאַן וואָס דו האָסט געבויט טאַקע פּאַסט צו דער משפּחה און פֿאַרגרעסערט די שאַנס אַז ער וועט זײַן אויסגעפֿירט אין דער היים.",
   "modal.routine.quote": "💡 עלטערן באַטאָנען אַז ס'איז גרינגער אָנצוּווענדן די עצות ווען זיי פּאַסן צום טאָג־טעגלעכן סדר, זענען פּשוט, פּראַקטיש און שאַפֿן נישט קיין נײַע לאַסט",
   "loading.routine": "שאַפֿט געדאַנקען...",
   "res.routine.header": "צוזאַמענפֿאַסונג פֿון דער קאָנטראָל",
@@ -2709,21 +2844,6 @@ translations.yi = {
   "info.allGood.q1": "וואָס גענוי מאַכט אַז די באַטייליקונג אַרבעט אַזוי גוט?",
   "info.allGood.q2": "ווי אַזוי קען מען דאָס אָפּהיטן אויך ווען עס וועלן זיך אַרויסשטעלן אַרויספֿאָדערונגען שפּעטער?",
   "info.allGood.suggestion": "שפּיגל דעם עלטער עפּעס קאָנקרעט וואָס דו האָסט געזען ער/זי טוט גוט, צו פֿאַרשטאַרקן זײַן/איר געפֿיל פֿון קענטעניש און מאָטיוואַציע צו האַלטן אָן.",
-  "info.belonging.interpretation": "די נידעריקסטע רעזולטאַטן ערשײַנען אין דעם שייכות־געביט — מעגלעך אַז דער עלטער פֿילט זיך ווייניקער פֿאַרבונדן אָדער ווייניקער \"אין דער היים\" אין דעם טעראַפּעווטישן אָרט, נישט אַז זיי טאַקע נישט אינטערעסירט.",
-  "info.belonging.q1": "וואָס וואָלט געקענט העלפֿן דעם עלטער פֿילן זיך מער אַ טייל פֿון דעם פּראָצעס דאָ?",
-  "info.belonging.q2": "ווי איך דערפֿאַר מײַן שייכות מיט אים/איר ביז אַהער?",
-  "info.belonging.q3": "וואָס האַלט מיך אָפּ פֿון בויען מער נאָענטקייט מיט דעם עלטער?",
-  "info.belonging.suggestion": "אין אָנהייב פֿון דער קומענדיקער זיצונג, פֿאַרברענג עטלעכע מינוט אין אַן אומפֿאָרמעלן שמועס מיטן עלטער, אָן פֿאָקוס אויף דער אויפֿגאַבע, צו פֿאַרשטאַרקן דעם געפֿיל פֿון פֿאַרבינדונג.",
-  "info.autonomy.interpretation": "די נידעריקסטע רעזולטאַטן ערשײַנען אין דעם אויטאָנאָמיע־געביט — מעגלעך אַז דער עלטער פֿילט נישט אַז ער/זי האָט גענוג קול אָדער ברירה אין דעם פּראָצעס, וואָס קען שאַטן זײַן/איר אינערלעכער מאָטיוואַציע.",
-  "info.autonomy.q1": "צי איך גיב דעם עלטער גענוג אָרט אָנצוּווירקן אויף דער אופֿן פֿון דער טעראַפּיע?",
-  "info.autonomy.q2": "וואָס קומט פֿאָר ווען דער עלטער פּרוּווט אַרויפֿברענגען אַן אייגענעם געדאַנק אָדער מיינונג?",
-  "info.autonomy.q3": "ווי אַזוי קען איך אים/איר מער אַרײַנציען אין דער באַשלוס־נעמונג?",
-  "info.autonomy.suggestion": "לאָז דעם עלטער אויסקלײַבן צווישן צוויי ברירות ווי אָנצוּווענדן דעם קומענדיקן ציל אין דער היים, צו פֿאַרשטאַרקן זײַן/איר געפֿיל פֿון ברירה.",
-  "info.competence.interpretation": "די נידעריקסטע רעזולטאַטן ערשײַנען אין דעם קענטעניש־געביט — מעגלעך אַז דער עלטער פֿילט נישט זיכער אין זײַן/איר פֿעאיקייט צו שטיצן דעם קינד, וואָס קען זיך אויסדריקן ווי דאגה, אויסמײַדונג, אָדער ציניזם קעגן דעם פּראָצעס.",
-  "info.competence.q1": "וואָס האָב איך געזען דער עלטער האָט טאַקע מצליח געווען צו טאָן, אַפֿילו עפּעס קליינס?",
-  "info.competence.q2": "ווי אַזוי קען איך שפּיגלען דערפֿאָלגן צום עלטער אויף אַן אופֿן וואָס פֿאַרשטאַרקט זײַן/איר בטחון?",
-  "info.competence.q3": "וואָס וואָלט מיר געהאָלפֿן בעסער פֿאַרשטיין פֿון וואַנען דער מאַנגל פֿון בטחון קומט?",
-  "info.competence.suggestion": "שפּיגל דעם עלטער איין קליינעם קאָנקרעטן דערפֿאָלג וואָס דו האָסט געזען אין דער זיצונג, צו פֿאַרשטאַרקן זײַן/איר געפֿיל פֿון קענטעניש.",
   "info.emotionalNote": "⚠️ קוק אַכטונג: דער עלטער דריקט אויס אַ מערקבאַרן עמאָציאָנעלן צער (כּעס/אומרו). מעגלעך כּדאי צו געבן צײַט אָנצונעמען דעם רגש איידער מ'גייט ווײַטער צום פּראַקטישן אַרבעט.",
   "reflect.header.covered": "✅ טעמעס וואָס דו האָסט אָנגערירט",
   "reflect.header.toConsider": "💭 פֿראַגעס צום טראַכטן וועגן טעמעס וואָס זענען נאָך נישט אויפֿגעקומען",
@@ -2774,15 +2894,12 @@ translations.yi = {
   "tip.strat10": "אונטערשטרײַכן כּוחות און קליינע דערפֿאָלגן איז געווען ספּעציעל ווערטפֿול - פילע עלטערן באַמערקן נישט תמיד אַליין דעם פּאַמעלעכן פֿאָרשריט (Grandisson et al., 2023).",
   "tip.strat10.want": "ווען דו וועסט דאָס פּרוּוון: זוך איין קליינעם דערפֿאָלג פֿונעם עלטער אָדער קינד און זאָג עס אַרויס אין קול - פילע עלטערן באַמערקן נישט תמיד דאָס אַליין (Grandisson et al., 2023).",
   "info.allGood.researchTip": "אַפֿילו ווען די באַטייליקונג גייט גוט, כּדאי צו האַלטן אונטערשטרײַכן קליינע דערפֿאָלגן כּדי צו האַלטן דעם positive פּראָצעס (Grandisson et al., 2023).",
-  "info.belonging.researchTip": "פֿאָרשונג באַטאָנט אַז אינוועסטירן אין דער באַציונג מיטן עלטער שוין פֿון אָנהייב פֿון דער טעראַפּיע איז דער יסוד פֿאַר לאַנג-טערמין באַטייליקונג (D'Arrigo et al., 2019).",
   "info.allEqual.interpretation": "אַלע דרײַ ווענדונגען (עמאָציאָנעל, קאָגניטיוו און פֿירונג) זענען אָפּגעשאַצט געוואָרן בערך אויף דער זעלביקער רמה. דאָס קען אָנווײַזן אַז די באַטייליקונג פֿונעם עלטער איז קאָנסיסטענט און באַלאַנסירט, און נישט אַז עס איז דאָ אַ ספּעציפֿישער געביט וואָס דאַרף באַזונדער אַכטונג.",
   "info.allEqual.q1": "איז דאָ אַ ספּעציפֿישער געביט וואָס איך וואָלט נאָך געוואָלט זען אַ ענדערונג אין, אַפֿילו אויב די רעזולטאַטן זענען ענלעך צווישן די ווענדונגען?",
   "info.allEqual.q2": "ווי וואָלט איך באַשריבן מײַן אַלגעמיינע באַציונג מיט דעם עלטער איצט?",
   "info.allEqual.q3": "וואָס קען פֿאַרשטאַרקן דעם אַלגעמיינעם בילד פֿון באַטייליקונג, און נישט נאָר איין ווענדונג פֿון איר?",
   "info.allEqual.suggestion": "מכיוון אַז די ווענדונגען זענען ענלעך איינע צו דער אַנדערער, כּדאי זיך צו פֿאָקוסירן אויף פֿאַרשטאַרקן די אַלגעמיינע באַציונג צווישן עלטער און טעראַפּיסטקע - צוטרוי, אָפֿענע קאָמוניקאַציע און אָנפּאַסונג צו זיך ענדערנדיקע באַדערפֿענישן - ווײַל דאָס ווירקט אויף אַלע אַספּעקטן פֿון באַטייליקונג אין איינעם.",
   "info.allEqual.researchTip": "עלטערנס באַטייליקונג באַשטייט פֿון דרײַ פֿאַרבונדענע ווענדונגען - עמאָציאָנעל, קאָגניטיוו און פֿירונג - וואָס ווירקן איינע אויף דער אַנדערער, אַזוי אַז פֿאַרשטאַרקן די אַלגעמיינע באַציונג מיטן עלטער קען העלפֿן אַלע דרײַ צוזאַמען (King et al., 2014).",
-  "info.autonomy.researchTip": "ווען אַן עלטער פֿילט נישט אַז ער האָט גענוג קול אין דעם פּראָצעס, האָט זיך אַרויסגעשטעלט אַז אמתע ברירה פֿאַרשטאַרקט זײַן אינערלעכע מאָטיוואַציע (D'Arrigo et al., 2016).",
-  "info.competence.researchTip": "עלטערן וואָס באַריכטן אַ שטאַרקערן געפֿיל פֿון קענטעניש זענען אָפֿט די וואָס זייערע קליינע דערפֿאָלגן זענען אונטערגעשטראָכן געוואָרן דורך דער טעראַפּיסטקע (D'Arrigo et al., 2019).",
   "strategy.modeLabel": "זענען די סטראַטעגיעס:",
   "strategy.mode.implemented": "שוין אָנגעוואַנדט",
   "strategy.mode.want": "סטראַטעגיעס וואָס איך וויל פּרוּוון",
@@ -2852,7 +2969,58 @@ translations.yi = {
   "impl.ease.otherPlaceholder": "נאָך געדאַנקען צו פֿאַרגרינגערן די אויספֿירונג (אַרויסגעוויילט)...",
   "impl.easeOtherLabel": "נאָך געדאַנקען:",
   "video5.title": "דער שליסל צו עלטערן־באַטייליקונג",
-  "modal.info.clinicalNote": "געדענק אַז אין יעדן פֿאַל דאַרף מען אָנווענדן קלינישן טראַכטן"
+  "modal.info.clinicalNote": "געדענק אַז אין יעדן פֿאַל דאַרף מען אָנווענדן קלינישן טראַכטן",
+  "scale.emotion.label": "רגש",
+  "scale.emotion.pos": "פֿרייליך, רויִק, שטאָלץ פֿון קינדס פּרוּוו",
+  "scale.emotion.neg": "פֿילט צאָרן, אומרו, ייִאוש",
+  "scale.connection.label": "פֿאַרבינדונג",
+  "scale.connection.pos": "וואַרעמע אינטעראַקציע",
+  "scale.connection.neg": "מאַנגל פֿון צוטרוי / פֿילט נישט באַשטעטיקט",
+  "scale.cogimpl.label": "אויספֿירונג",
+  "scale.cogimpl.pos": "געדענקט און פֿירט אויס היים־אָנווײַזונגען",
+  "scale.cogimpl.neg": "געדענקט נישט און פֿירט נישט אויס היים־אָנווײַזונגען",
+  "scale.communication.label": "קאָמוניקאַציע",
+  "scale.communication.pos": "שטעלט פֿראַגעס צו קלאָרן",
+  "scale.communication.neg": "מײַדט אויס פֿראַגעס / רעאַגירט נישט",
+  "scale.expectations.label": "דערוואַרטונגען",
+  "scale.expectations.pos": "צוגעפּאַסטע דערוואַרטונגען",
+  "scale.expectations.neg": "\"פֿאַרריכטן\"־מאָדעל — דערוואַרט אַז דער טעראַפּיסט זאָל אַלץ פֿאַרריכטן",
+  "scale.dialogue.label": "שמועס",
+  "scale.dialogue.pos": "טראָגט בײַ צום שמועס אין רגע",
+  "scale.dialogue.neg": "ענטפֿערט קורץ / שווײַגט",
+  "scale.behaviorfit.label": "פֿירונג",
+  "scale.behaviorfit.pos": "ווײַזט פּאַסיקע פֿירונג און אינטערעס",
+  "scale.behaviorfit.neg": "ווײַזט נישט־פּאַסיקע פֿירונג און אינטערעס",
+  "info.emotional.interpretation": "די נידעריקסטע רעזולטאַטן ערשײַנען אין דעם עמאָציאָנעלן געביט — מעגלעך אַז דער עלטער האָט נאָך נישט געבויט אַ געפֿיל פֿון צוטרוי, תּקווה אָדער עמאָציאָנעלער פֿאַרבינדונג צום פּראָצעס און צום טעראַפּיסט, וואָס קען ווירקן אויף זײַן גרייטקייט צו אינוועסטירן (King et al., 2014).",
+  "info.emotional.q1": "וואָס פֿילט דער עלטער צו מיר און צום פּראָצעס איצט?",
+  "info.emotional.q2": "וואָס קען פֿאַרשטאַרקן זײַן געפֿיל פֿון צוטרוי און תּקווה?",
+  "info.emotional.q3": "איז דאָ עפּעס וואָס מאַכט אים פֿילן אומרו, צאָרן אָדער ייִאוש?",
+  "info.emotional.suggestion": "פֿאַרברענג עטלעכע מינוט אין אַן אומפֿאָרמעלן שמועס מיטן עלטער און שפּיגל אים אַ פּאָזיטיוון פּונקט וואָס דו האָסט באַמערקט, כּדי צו פֿאַרשטאַרקן זײַן געפֿיל פֿון צוטרוי און תּקווה.",
+  "info.emotional.researchTip": "אַ געפֿיל פֿון תּקווה, צוטרוי צום פּראָצעס און צוטרוי צום טעראַפּיסט זענען צענטראַל צו אַן אָפּטימאַלן מצב פֿון עלטערן־באַטייליקונג (King et al., 2014).",
+  "info.cognitive.interpretation": "די נידעריקסטע רעזולטאַטן ערשײַנען אין דעם קאָגניטיוון געביט — מעגלעך אַז דער עלטער איז נאָך נישט איבערצײַגט וועגן דער עפֿעקטיוויטעט פֿון דער אינטערווענציע, אָדער האָט נישט גענוג קלאָרקייט וועגן דעם רציונל און דערוואַרטונגען, וואָס קען אָפּשוואַכן זײַן מחויבות (King et al., 2014).",
+  "info.cognitive.q1": "פֿאַרשטייט דער עלטער טאַקע פֿאַרוואָס מיר טוען וואָס מיר טוען?",
+  "info.cognitive.q2": "שטימען זײַנע דערוואַרטונגען פֿונעם פּראָצעס מיט וואָס איז ריאַליסטיש?",
+  "info.cognitive.q3": "וואָס קען פֿאַרשטאַרקן זײַן גלויבן אין דער עפֿעקטיוויטעט פֿון דער אינטערווענציע?",
+  "info.cognitive.suggestion": "דערקלער אין קורצן דעם רציונל הינטער דער קומענדיקער אַקטיוויטעט און קאָנטראָלירט מיטן עלטער אַז די בעדערזײַטיקע דערוואַרטונגען שטימען.",
+  "info.cognitive.researchTip": "גלויבן אַז די אינטערווענציע איז נייטיק און וועט זײַן עפֿעקטיוו (קאָנוויקציע) איז געפֿונען געוואָרן אַלס אַ צענטראַלער טייל פֿון אָפּטימאַלער עלטערן־באַטייליקונג (King et al., 2014).",
+  "info.behavioral.interpretation": "די נידעריקסטע רעזולטאַטן ערשײַנען אין דעם פֿירונג־געביט — מעגלעך אַז דער עלטער קעמפֿט נאָך זיך אַקטיוו צו באַטייליקן אין דער זיצונג אָדער אויסצופֿירן אין דער היים, וואָס קען אָפּשפּיגלען אַ נידעריקערן געפֿיל פֿון קענטעניש (King et al., 2014; D'Arrigo et al., 2020).",
+  "info.behavioral.q1": "וואָס האַלט דעם עלטער אָפּ פֿון זײַן אַ מער אַקטיוון שותּף אין דער זיצונג?",
+  "info.behavioral.q2": "פֿילט דער עלטער אַז ער איז טאַקע מסוגל אויסצופֿירן דאָס וואָס איז רעקאָמענדירט אין דער היים?",
+  "info.behavioral.q3": "וואָס קליינער דערפֿאָלג קען פֿאַרשטאַרקן זײַן געפֿיל פֿון קענטעניש?",
+  "info.behavioral.suggestion": "גיב דעם עלטער אַן אַקטיוון, קאָנקרעטן תּפקיד אין דער קומענדיקער זיצונג, כּדי צו פֿאַרשטאַרקן זײַן געפֿיל פֿון קענטעניש און באַטייליקונג.",
+  "info.behavioral.researchTip": "אַ געפֿיל פֿון קענטעניש אויסצופֿירן דאָס וואָס איז רעקאָמענדירט (זעלבסט־עפֿעקטיוויטעט) איז געפֿונען געוואָרן אַלס איינער פֿון דרײַ צענטראַלע טיילן פֿון אָפּטימאַלער עלטערן־באַטייליקונג (King et al., 2014).",
+  "info.initial.label": "ערשטער אות פֿונעם פּאַציענט",
+  "info.initial.placeholder": "למשל: א",
+  "btn.saveInfo": "💾 ראַטעווע",
+  "alert.infoSaveRequired": "ביטע צייכן אָפּ בײַם ווייניקסטן איין סימן אָדער שרײַב אַ הערה, און שרײַבט דעם ערשטן אות פֿונעם פּאַציענט, איידער מ׳ראַטעווע.",
+  "info.pastTitle": "📚 פֿריִערדיקע אָפּשאַצן",
+  "strategy.trackingNote": "מ'קען צייכענען די סטראַטעגיעס וואָס איר האָט שוין אָנגעוואַנדן אָדער וואָס איר בײַאַבסיכטיקט אָנצוּווענדן, און ראַטעווען דאָס כּדי צו נאָכפֿאָלגן מיט דער צײַט.",
+  "strategy.belongingCtx.placeholder": "נאָך פֿרײַער טעקסט פֿאַר שייכות (אַרויסגעוויילט)...",
+  "strategy.autonomyCtx.placeholder": "נאָך פֿרײַער טעקסט פֿאַר אויטאָנאָמיע (אַרויסגעוויילט)...",
+  "strategy.competenceCtx.placeholder": "נאָך פֿרײַער טעקסט פֿאַר קענטעניש (אַרויסגעוויילט)...",
+  "info.group.emotional": "עמאָציאָנעלע באַטייליקונג",
+  "info.group.cognitive": "קאָגניטיווע באַטייליקונג",
+  "info.group.behavioral": "פֿירונג־באַטייליקונג"
 };
 
 translations.am = {
@@ -2863,9 +3031,9 @@ translations.am = {
   "hero.quote": "የወላጅ ተሳትፎ ለሕክምናው ስኬት አስተዋፅኦ ያደርጋል፣ የልጁን ተግባር ያሻሽላል፣ እንዲሁም ምክሮችን በዕለት ተዕለት ኑሮ ውስጥ ለማካተት ይረዳል።",
   "section.title": "በሕክምና ወቅት የወላጅ ተሳትፎን ለማጎልበት አጫጭር እና ተግባራዊ መሳሪያዎች።",
   "section.subtitle": "እንኳን ደህና መጡ! በሚቀጥለው ክፍለ ጊዜዎ ሊረዳዎ የሚችለውን መሳሪያ ይምረጡ። (ክሊኒካዊ ፍርድዎን መጠቀም እንዳይረሱ)",
-  "card.info.title": "ወላጅ በሕክምናው ውስጥ እንዴት ይሳተፋል?",
+  "card.info.title": "የወላጅ ተሳትፎን መለየት",
   "card.info.subtitle": "የተሳትፎውን ደረጃ ይለዩ እና ለቀጣይ እርምጃዎች አቅጣጫ ያግኙ።",
-  "card.routine.title": "የትግበራውን ዕድል እንዴት እናሳድጋለን?",
+  "card.routine.title": "የቤት ውስጥ መመሪያን ተግባራዊነት እንዴት እናሳድጋለን?",
   "card.routine.subtitle": "መመሪያውን ለቤተሰቡ ማስማማት",
   "card.strategies.title": "ዛሬ ምን ማድረግ ትችያለሽ?",
   "card.strategies.subtitle": "በቀጣዩ ክፍለ ጊዜ ተግባራዊ የሚደረጉ አጫጭር ስልቶች።",
@@ -2878,48 +3046,42 @@ translations.am = {
   "card.about.title": "ስለ እኔ ጥቂት ቃላት",
   "modal.growth.banner": "ዛሬ በሕክምናው ውስጥ... ከወላጅ ጋር በመስራት ዛሬ ምን ተማርሽ?",
   "footer.content": "በ<strong>ብራካ ያጎዳ</strong> የተዘጋጀ፣ በኢየሩሳሌም ዕብራይስጥ ዩኒቨርሲቲ በሙያ ሕክምና ማስተርስ ዲግሪ ትምህርት አካል<br>አማካሪ: ዶ/ር ኒሪት ላቮን ኤሬዝ<br>© ሁሉም መብቶች የተጠበቁ ናቸው",
-  "modal.info.title": "🤔 ወላጅ በሕክምናው ውስጥ እንዴት ይሳተፋል?",
-  "modal.info.banner": "በእያንዳንዱ ገጽታ የወላጅን የተስተዋለ ተሳትፎ አመልካቾችን ይለኩ። ስርዓቱ በራስን በራስ የመወሰን ንድፈ ሃሳብ (SDT) ላይ የተመሰረቱ ማሰላሰያ ጥያቄዎችን እና የተግባር አቅጣጫዎችን ይጠቁማል።",
+  "modal.info.title": "🤔 የወላጅ ተሳትፎን መለየት",
+  "modal.info.banner": "በእያንዳንዱ ገጽታ የወላጅን የተስተዋለ ተሳትፎ አመልካቾችን ይለኩ። ስርዓቱ በወላጅ ተሳትፎ ሞዴል ላይ የተመሰረቱ ማሰላሰያ ጥያቄዎችን እና የተግባር አቅጣጫዎችን ይጠቁማል።",
   "modal.info.quote": "💡 የወላጅ ተሳትፎ ስሜታዊ፣ ባህሪያዊ እና አዕምሯዊ ገጽታዎችን ያካተተ ውስብስብ እና ተለዋዋጭ ሂደት ነው",
   "modal.info.warning": "⚠️ እባክዎ ስሞችን ወይም መለያ ዝርዝሮችን አያስገቡ",
   "acc.emotional.title": "ስሜታዊ ገጽታ",
-  "acc.emotional.sub": "ፍላጎት፣ ቅርበት፣ ስሜታዊ መግለጫ",
+  "acc.emotional.sub": "ወላጁ በሂደቱ ውስጥ ከቴራፒስቱ ጋር ያለው ስሜታዊ ներդրում (በቃልም ሆነ ያለ ቃል）.",
   "scale.interest.label": "ፍላጎት",
-  "scale.interest.pos": "ተመጣጣኝ ፍላጎት ያሳያል",
-  "scale.interest.neg": "ግድየለሽነት",
+  "scale.interest.pos": "ተስማሚ ፍላጎት እና ጉጉት ያሳያል",
+  "scale.interest.neg": "ግድየለሽነት / የፍላጎት እጦት",
   "scale.bodylang.label": "የሰውነት ቋንቋ",
-  "scale.bodylang.pos": "ክፍት እና ሞቅ ያለ",
-  "scale.bodylang.neg": "የተዘጋ እና የራቀ",
+  "scale.bodylang.pos": "ክፍት / ሞቅ ያለ",
+  "scale.bodylang.neg": "የተዘጋ / የራቀ",
   "scale.hope.label": "ተስፋ",
-  "scale.hope.pos": "ብሩህ ተስፋ",
-  "scale.hope.neg": "ተስፋ መቁረጥ",
-  "scale.generalemotion.label": "አጠቃላይ ስሜት",
-  "scale.generalemotion.pos": "የተረጋጋ እና ኩራት የተሞላበት",
-  "scale.generalemotion.neg": "ንዴት / ጭንቀት",
+  "scale.hope.pos": "በጥንካሬ ላይ ያተኮረ ቋንቋ፣ ብሩህ ተስፋ",
+  "scale.hope.neg": "ተስፋ መቁረጥ / ተስፋ ማጣት",
   "placeholder.emoCtx": "ስለ ስሜታዊ ገጽታ አጭር ማስታወሻ (አማራጭ)...",
   "acc.cognitive.title": "አዕምሯዊ ገጽታ",
-  "acc.cognitive.sub": "መረዳት፣ እምነት፣ ግምቶች",
-  "scale.belief.label": "በሂደቱ ላይ ያለ እምነት",
-  "scale.belief.pos": "በሕክምናው ያምናል",
-  "scale.belief.neg": "ጥርጣሬዎችን ይገልጻል",
+  "acc.cognitive.sub": "ወላጁ ስለ ጣልቃ ገብነቱ አስፈላጊነት እና ውጤታማነት ያለው እምነት.",
+  "scale.belief.label": "እምነት",
+  "scale.belief.pos": "በሕክምናው ውጤታማነት ያምናል",
+  "scale.belief.neg": "ስለ ውጤታማነት ጥርጣሬዎች",
   "scale.understanding.label": "መረዳት",
   "scale.understanding.pos": "ምክንያቱን ይረዳል",
-  "scale.understanding.neg": "የግልጽነት እጦት",
-  "scale.questions.label": "ጥያቄ ማንሳት",
-  "scale.questions.pos": "ይጠይቃል እና ይመረምራል",
-  "scale.questions.neg": "ጥያቄዎችን ያስወግዳል",
+  "scale.understanding.neg": "የግልጽነት እጦት / የማይጣጣሙ ግምቶች",
   "placeholder.cogCtx": "ስለ አዕምሯዊ ገጽታ አጭር ማስታወሻ (አማራጭ)...",
   "acc.behavioral.title": "ባህሪያዊ ገጽታ",
-  "acc.behavioral.sub": "መገኘት፣ ተነሳሽነት፣ በቤት ውስጥ ተግባራዊ ማድረግ",
-  "scale.presence.label": "በክፍሉ ውስጥ መገኘት",
-  "scale.presence.pos": "ሙሉ በሙሉ ተገኝቷል",
-  "scale.presence.neg": "ትኩረት የተከፋፈለ (ስልክ ወዘተ)",
-  "scale.initiative.label": "በውይይት ውስጥ ተነሳሽነት",
-  "scale.initiative.pos": "አስተዋፅኦ ያደርጋል እና ተነሳሽነት ይወስዳል",
-  "scale.initiative.neg": "ተገብጋቢ እና ጸጥ ያለ",
-  "scale.homeimpl.label": "በቤት ውስጥ ተግባራዊ ማድረግ",
-  "scale.homeimpl.pos": "በቤት ውስጥ ወጥነት ያለው",
-  "scale.homeimpl.neg": "ተግባራዊ አያደርግም",
+  "acc.behavioral.sub": "በክፍለ ጊዜው ውስጥ ንቁ ተሳትፎ እና ለመስተጋብሩ የጋራ አስተዋፅኦ.",
+  "scale.presence.label": "መገኘት",
+  "scale.presence.pos": "ሙሉ በሙሉ ተገኝቷል (ያለ ስልክ)",
+  "scale.presence.neg": "ስልክ መጠቀም / ዘግይቶ መምጣት",
+  "scale.initiative.label": "ተነሳሽነት",
+  "scale.initiative.pos": "ግንኙነትን ይጀምራል / እንቅስቃሴዎችን ይመርጣል",
+  "scale.initiative.neg": "ተገብጋቢ / ባዶ ትኩረት",
+  "scale.homeimpl.label": "ተግባራዊነት",
+  "scale.homeimpl.pos": "በቤት ውስጥ ወጥነት ባለው መልኩ ያከናውናል",
+  "scale.homeimpl.neg": "በቤት ውስጥ አያከናውንም",
   "placeholder.behCtx": "ስለ ባህሪያዊ ገጽታ አጭር ማስታወሻ (አማራጭ)...",
   "field.additionalContext.label": "ተጨማሪ አውድ (ነጻ ጽሁፍ)",
   "placeholder.infoCtx": "ለምሳሌ፦ አባትየው በመደበኛነት ይመጣል ግን ወደ ጎን ተቀምጦ በስልኩ ላይ ነው... ይህ ይመሳሰላል?",
@@ -2930,7 +3092,7 @@ translations.am = {
   "btn.whatsapp": "💬 WhatsApp",
   "btn.print": "🖨️ አትም",
   "modal.routine.title": "🏠 በቤት ውስጥ ተግባራዊ ማድረግ",
-  "modal.routine.banner": "ክፍለ ጊዜውን ከመጨረስዎ በፊት፣ ለአፍታ ቁሙ እና የገነቡት እቅድ በእውነት ለቤተሰቡ የሚስማማ እና በቤት ውስጥ ተግባራዊ የመሆኑን እድል የሚጨምር መሆኑን ይመልከቱ።",
+  "modal.routine.banner": "የቤት ውስጥ መመሪያ ከመስጠትዎ በፊት፣ ለአፍታ ቁሙ እና የገነቡት እቅድ በእውነት ለቤተሰቡ የሚስማማ እና በቤት ውስጥ ተግባራዊ የመሆኑን እድል የሚጨምር መሆኑን ይመልከቱ።",
   "modal.routine.quote": "💡 ወላጆች ምክሮች ከዕለት ተዕለት ልማዳቸው ጋር ሲስማሙ፣ ቀላል፣ ተግባራዊ እና ተጨማሪ ጫና የማይፈጥሩ ሲሆኑ ተግባራዊ ማድረግ ቀላል እንደሆነ ያጎላሉ",
   "loading.routine": "ሃሳቦችን በማመንጨት ላይ...",
   "res.routine.header": "የፍተሻ ማጠቃለያ",
@@ -3028,21 +3190,6 @@ translations.am = {
   "info.allGood.q1": "ይህን ተሳትፎ በደንብ እንዲሰራ በትክክል ያደረገው ምንድን ነው?",
   "info.allGood.q2": "ወደፊት ተግዳሮቶች ሲፈጠሩ እንኳን ይህን እንዴት ማስቀጠል ይቻላል?",
   "info.allGood.suggestion": "ወላጁ ጥሩ ሆኖ ያዩትን አንድ ተጨባጭ ነገር ለወላጁ ተመልሰው ያንጸባርቁ፣ ይህም የብቃት ስሜታቸውን እና ለመቀጠል ያላቸውን ተነሳሽነት ያጠናክራል።",
-  "info.belonging.interpretation": "ዝቅተኛዎቹ ውጤቶች የሚታዩት በመካተት ገጽታ ውስጥ ነው — ወላጁ በሕክምናው ቦታ ውስጥ ያነሰ የተገናኘ ወይም ያነሰ \"የቤት\" ስሜት ሊሰማው ይችላል፣ ከእውነተኛ ፍላጎት እጦት ይልቅ።",
-  "info.belonging.q1": "ይህ ወላጅ እዚህ ካለው ሂደት የበለጠ አካል እንደሆነ እንዲሰማው ምን ሊረዳ ይችላል?",
-  "info.belonging.q2": "እስካሁን ካለው ግንኙነት ጋር እንዴት ነው ያለሁት?",
-  "info.belonging.q3": "ከዚህ ወላጅ ጋር የበለጠ ቅርበት ከመፍጠር የሚያግደኝ ምንድን ነው?",
-  "info.belonging.suggestion": "በሚቀጥለው ክፍለ ጊዜ መጀመሪያ ላይ፣ በስራው ላይ ሳያተኩሩ ከወላጁ ጋር ጥቂት ደቂቃዎችን መደበኛ ባልሆነ ውይይት ላይ ያሳልፉ፣ የግንኙነት ስሜቱን ለማጠናከር።",
-  "info.autonomy.interpretation": "ዝቅተኛዎቹ ውጤቶች የሚታዩት በራስ ገዝነት ገጽታ ውስጥ ነው — ወላጁ በሂደቱ ውስጥ በቂ ድምጽ ወይም ምርጫ እንዳለው ላይሰማው ይችላል፣ ይህም ውስጣዊ ተነሳሽነቱን ሊያዳክም ይችላል።",
-  "info.autonomy.q1": "ለዚህ ወላጅ ሕክምናው እንዴት እንደሚካሄድ ተጽዕኖ ለማድረግ በቂ ቦታ እየሰጠሁ ነው?",
-  "info.autonomy.q2": "ወላጁ የራሱን ሃሳብ ወይም አስተያየት ለማንሳት ሲሞክር ምን ይከሰታል?",
-  "info.autonomy.q3": "በውሳኔ አሰጣጥ ውስጥ የበለጠ እንዴት ማሳተፍ እችላለሁ?",
-  "info.autonomy.suggestion": "ወላጁ የምርጫ ስሜቱን ለማጠናከር በቤት ውስጥ ቀጣዩን ግብ ተግባራዊ ለማድረግ በሁለት አማራጮች መካከል እንዲመርጥ ይፍቀዱ።",
-  "info.competence.interpretation": "ዝቅተኛዎቹ ውጤቶች የሚታዩት በብቃት ገጽታ ውስጥ ነው — ወላጁ ልጁን የመደገፍ ችሎታው ላይ እርግጠኛ ላይሆን ይችላል፣ ይህም እንደ ጭንቀት፣ መራቅ ወይም ስለ ሂደቱ ተጠራጣሪነት ሊገለጽ ይችላል።",
-  "info.competence.q1": "ወላጁ ስኬታማ ሆኖ ያየሁት የት ነው፣ ትንሽም ቢሆን?",
-  "info.competence.q2": "ስኬቶችን ወደ ወላጁ በሚያጠናክር መንገድ እንዴት ተመልሼ ማንጸባረቅ እችላለሁ?",
-  "info.competence.q3": "ይህ የመተማመን እጦት ከየት እንደሚመጣ በተሻለ እንድረዳ ምን ሊረዳኝ ይችላል?",
-  "info.competence.suggestion": "በክፍለ ጊዜው ውስጥ ያዩትን አንድ ትንሽ፣ ተጨባጭ ስኬት ለወላጁ ተመልሰው ያንጸባርቁ፣ የብቃት ስሜታቸውን ለማጠናከር።",
   "info.emotionalNote": "⚠️ ማሳሰቢያ: ወላጁ ጉልህ ስሜታዊ ችግር (ንዴት/ጭንቀት) እየገለጸ ነው። ወደ ተግባራዊ ስራ ከመሸጋገሩ በፊት ያንን ስሜት ለመያዝ ጊዜ መውሰድ ተገቢ ሊሆን ይችላል።",
   "reflect.header.covered": "✅ የሸፈኗቸው ርዕሶች",
   "reflect.header.toConsider": "💭 ገና ላልተነሱ ርዕሶች ለማሰብ የሚረዱ ጥያቄዎች",
@@ -3093,15 +3240,12 @@ translations.am = {
   "tip.strat10": "ጥንካሬዎችን እና ትናንሽ ስኬቶችን ማጉላት በተለይ ጠቃሚ ነበር — ብዙ ወላጆች ቀስ ያለ እድገትን በራሳቸው ሁልጊዜ አያስተውሉም (Grandisson et al., 2023)።",
   "tip.strat10.want": "ይህን ሲሞክሩ: በወላጁ ወይም በልጁ የተደረገ አንድ ትንሽ ስኬት ይፈልጉ እና ጮክ ብለው ይናገሩት — ብዙ ወላጆች ይህን ራሳቸው ሁልጊዜ አያስተውሉም (Grandisson et al., 2023)።",
   "info.allGood.researchTip": "ተሳትፎ በጥሩ ሁኔታ በሚሄድበት ጊዜ እንኳን፣ አዎንታዊውን ሂደት ለማስቀጠል ትናንሽ ስኬቶችን ማጉላቱን መቀጠል ተገቢ ነው (Grandisson et al., 2023)።",
-  "info.belonging.researchTip": "ጥናት እንደሚያጎላው ከሕክምናው መጀመሪያ ጀምሮ በወላጁ ግንኙነት ላይ ኢንቨስት ማድረግ ለረጅም ጊዜ ተሳትፎ መሰረት ነው (D'Arrigo et al., 2019)።",
   "info.allEqual.interpretation": "ሦስቱም ገጽታዎች (ስሜታዊ፣ አዕምሯዊ እና ባህሪያዊ) በግምት በተመሳሳይ ደረጃ ተለክተዋል። ይህ የተለየ ትኩረት የሚፈልግ አንድ የተወሰነ ገጽታ ከመኖሩ ይልቅ የወላጁ ተሳትፎ ወጥ እና የተመጣጠነ መሆኑን ሊያመለክት ይችላል።",
   "info.allEqual.q1": "ውጤቶቹ በገጽታዎች መካከል ተመሳሳይ ቢሆኑም እንኳ አሁንም ለውጥ ማየት የምፈልግበት የተወሰነ ገጽታ አለ?",
   "info.allEqual.q2": "አሁን ካለሁበት ወላጅ ጋር ያለኝን አጠቃላይ ግንኙነት እንዴት እገልጻለሁ?",
   "info.allEqual.q3": "ከአንድ ገጽታ ብቻ ይልቅ የተሳትፎውን አጠቃላይ ምስል ምን ሊያጠናክር ይችላል?",
   "info.allEqual.suggestion": "ገጽታዎቹ እርስ በርስ ተመሳሳይ ስለሆኑ፣ በአንድ ጊዜ በተሳትፎው ገጽታዎች ሁሉ ላይ ተጽዕኖ ስለሚያደርግ በአጠቃላይ የወላጅ-ቴራፒስት ግንኙነትን ማጠናከር ላይ ማተኮር ተገቢ ነው — መተማመን፣ ግልጽ ግንኙነት እና ለተለዋዋጭ ፍላጎቶች ምላሽ መስጠት።",
   "info.allEqual.researchTip": "የወላጅ ተሳትፎ እርስ በርስ በሚደጋገፉ ሦስት ገጽታዎች — ስሜታዊ፣ አዕምሯዊ እና ባህሪያዊ — የተዋቀረ ነው፣ ስለዚህ ከወላጁ ጋር ያለውን አጠቃላይ ግንኙነት ማጠናከር ለሦስቱም በአንድ ጊዜ ጠቃሚ ሊሆን ይችላል (King et al., 2014)።",
-  "info.autonomy.researchTip": "ወላጅ በሂደቱ ውስጥ በቂ ድምጽ እንዳለው ስሜት በማይሰማው ጊዜ፣ እውነተኛ ምርጫ ውስጣዊ ተነሳሽነታቸውን እንደሚያጠናክር ተገኝቷል (D'Arrigo et al., 2016)።",
-  "info.competence.researchTip": "የበለጠ ጠንካራ የብቃት ስሜት የሚዘግቡ ወላጆች ብዙውን ጊዜ ትናንሽ ስኬቶቻቸው በቴራፒስቱ የተጎሉላቸው ናቸው (D'Arrigo et al., 2019)።",
   "strategy.modeLabel": "እነዚህ ስልቶች:",
   "strategy.mode.implemented": "አስቀድሜ ተግባራዊ አድርጌያለሁ",
   "strategy.mode.want": "መሞከር የምፈልጋቸው ስልቶች",
@@ -3171,7 +3315,58 @@ translations.am = {
   "impl.ease.otherPlaceholder": "ተግባራዊነትን ለማቅለል ተጨማሪ ሃሳቦች (አማራጭ)...",
   "impl.easeOtherLabel": "ተጨማሪ ሃሳቦች:",
   "video5.title": "የወላጅ ተሳትፎ ቁልፍ",
-  "modal.info.clinicalNote": "በማንኛውም ሁኔታ ክሊኒካዊ አስተሳሰብን መጠቀም እንዳለብዎት ያስታውሱ"
+  "modal.info.clinicalNote": "በማንኛውም ሁኔታ ክሊኒካዊ አስተሳሰብን መጠቀም እንዳለብዎት ያስታውሱ",
+  "scale.emotion.label": "ስሜት",
+  "scale.emotion.pos": "ደስተኛ፣ የተረጋጋ፣ በልጁ ጥረት ኩራት የተሞላ",
+  "scale.emotion.neg": "ንዴት፣ ጭንቀት፣ ተስፋ መቁረጥ ይሰማዋል",
+  "scale.connection.label": "ግንኙነት",
+  "scale.connection.pos": "ሞቅ ያለ መስተጋብር",
+  "scale.connection.neg": "እምነት ማጣት / እውቅና እንዳገኘ አይሰማውም",
+  "scale.cogimpl.label": "ተግባራዊነት",
+  "scale.cogimpl.pos": "የቤት መመሪያዎችን ያስታውሳል እና ተግባራዊ ያደርጋል",
+  "scale.cogimpl.neg": "የቤት መመሪያዎችን አያስታውስም ወይም ተግባራዊ አያደርግም",
+  "scale.communication.label": "ግንኙነት (ንግግር)",
+  "scale.communication.pos": "ማብራሪያ ለማግኘት ጥያቄዎችን ይጠይቃል",
+  "scale.communication.neg": "ጥያቄዎችን ያስወግዳል / ምላሽ አይሰጥም",
+  "scale.expectations.label": "ግምቶች",
+  "scale.expectations.pos": "የተጣጣሙ ግምቶች",
+  "scale.expectations.neg": "\"ማስተካከያ\" ሞዴል — ቴራፒስቱ ሁሉንም እንዲያስተካክል ይጠብቃል",
+  "scale.dialogue.label": "ውይይት",
+  "scale.dialogue.pos": "በቀጥታ ውይይት ውስጥ አስተዋፅኦ ያደርጋል",
+  "scale.dialogue.neg": "በአጭሩ ይመልሳል / ጸጥ ይላል",
+  "scale.behaviorfit.label": "ባህሪ",
+  "scale.behaviorfit.pos": "ተስማሚ ባህሪ እና ፍላጎት ያሳያል",
+  "scale.behaviorfit.neg": "ተስማሚ ያልሆነ ባህሪ እና ፍላጎት ያሳያል",
+  "info.emotional.interpretation": "ዝቅተኛዎቹ ውጤቶች የሚታዩት በስሜታዊ ገጽታ ውስጥ ነው — ወላጁ ገና ለሂደቱ እና ለቴራፒስቱ የመተማመን፣ የተስፋ ወይም የስሜታዊ ግንኙነት ስሜት አልገነባም ሊሆን ይችላል፣ ይህም በኢንቨስት ለማድረግ ያለውን ፈቃደኝነት ሊነካ ይችላል (King et al., 2014).",
+  "info.emotional.q1": "ወላጁ አሁን ለእኔ እና ለሂደቱ ምን ይሰማዋል?",
+  "info.emotional.q2": "የመተማመን እና የተስፋ ስሜቱን ምን ሊያጠናክር ይችላል?",
+  "info.emotional.q3": "ጭንቀት፣ ንዴት ወይም ተስፋ መቁረጥ እንዲሰማው የሚያደርገው ነገር አለ?",
+  "info.emotional.suggestion": "ከወላጁ ጋር ጥቂት ደቂቃዎችን መደበኛ ባልሆነ ውይይት ላይ አሳልፉ እና ያዩትን አዎንታዊ ነጥብ ተመልሳችሁ አንጸባርቁለት፣ የመተማመን እና የተስፋ ስሜቱን ለማጠናከር።",
+  "info.emotional.researchTip": "የተስፋ ስሜት፣ በሂደቱ ላይ መተማመን እና በቴራፒስቱ ላይ እምነት ለወላጅ ተሳትፎ ጥሩ ሁኔታ ማዕከላዊ ናቸው (King et al., 2014).",
+  "info.cognitive.interpretation": "ዝቅተኛዎቹ ውጤቶች የሚታዩት በአዕምሯዊ ገጽታ ውስጥ ነው — ወላጁ ገና ስለ ጣልቃ ገብነቱ ውጤታማነት አልተማመነም ወይም ስለ ምክንያቱ እና ግምቶች በቂ ግልጽነት የለውም ሊሆን ይችላል፣ ይህም ቁርጠኝነቱን ሊያዳክም ይችላል (King et al., 2014).",
+  "info.cognitive.q1": "ወላጁ የምናደርገውን ለምን እንደምናደርገው በእውነት ይረዳል?",
+  "info.cognitive.q2": "ከሂደቱ ያለው ግምት ተጨባጭ ከሆነው ጋር ይጣጣማል?",
+  "info.cognitive.q3": "በጣልቃ ገብነቱ ውጤታማነት ላይ ያለውን እምነት ምን ሊያጠናክር ይችላል?",
+  "info.cognitive.suggestion": "ስለ ቀጣዩ እንቅስቃሴ ምክንያት በአጭሩ አብራሩ እና ከወላጁ ጋር የጋራ ግምቶች መጣጣማቸውን ያረጋግጡ።",
+  "info.cognitive.researchTip": "ጣልቃ ገብነቱ አስፈላጊ እና ውጤታማ እንደሚሆን ማመን (እምነት) ለወላጅ ተሳትፎ ጥሩ ሁኔታ ማዕከላዊ አካል ሆኖ ተገኝቷል (King et al., 2014).",
+  "info.behavioral.interpretation": "ዝቅተኛዎቹ ውጤቶች የሚታዩት በባህሪያዊ ገጽታ ውስጥ ነው — ወላጁ ገና በክፍለ ጊዜው ውስጥ በንቃት ለመሳተፍ ወይም በቤት ውስጥ ተግባራዊ ለማድረግ ይቸገር ይሆናል፣ ይህም ዝቅተኛ የብቃት ስሜትን ሊያንጸባርቅ ይችላል (King et al., 2014; D'Arrigo et al., 2020).",
+  "info.behavioral.q1": "ወላጁ በክፍለ ጊዜው ውስጥ የበለጠ ንቁ አጋር እንዳይሆን የሚከለክለው ምንድን ነው?",
+  "info.behavioral.q2": "ወላጁ በቤት ውስጥ የተመከረውን በእውነት ተግባራዊ ማድረግ እንደሚችል ይሰማዋል?",
+  "info.behavioral.q3": "የብቃት ስሜቱን ምን ትንሽ ስኬት ሊያጠናክር ይችላል?",
+  "info.behavioral.suggestion": "በሚቀጥለው ክፍለ ጊዜ ወላጁን ንቁ እና ተጨባጭ ሚና ስጡት፣ የብቃት እና የተሳትፎ ስሜቱን ለማጠናከር።",
+  "info.behavioral.researchTip": "የተመከረውን ተግባራዊ ለማድረግ ያለው የብቃት ስሜት (ራስን የመቻል ስሜት) ከወላጅ ተሳትፎ ጥሩ ሁኔታ ሦስት ዋና አካላት አንዱ ሆኖ ተገኝቷል (King et al., 2014).",
+  "info.initial.label": "የታካሚው የመጀመሪያ ፊደል",
+  "info.initial.placeholder": "ለምሳሌ፦ ሀ",
+  "btn.saveInfo": "💾 አስቀምጥ",
+  "alert.infoSaveRequired": "እባክዎ ቢያንስ አንድ አመልካች ይምረጡ ወይም ማስታወሻ ይጻፉ፣ እና ከማስቀመጥዎ በፊት የታካሚውን የመጀመሪያ ፊደል ይጻፉ።",
+  "info.pastTitle": "📚 ያለፉ ግምገማዎች",
+  "strategy.trackingNote": "አስቀድመው ተግባራዊ ያደረጓቸውን ወይም ተግባራዊ ለማድረግ ያሰቡትን ስልቶች መልገብ ይችላሉ፣ ይህንንም ለክትትል ማስቀመጥ ይችላሉ።",
+  "strategy.belongingCtx.placeholder": "ለመካተት ተጨማሪ ነጻ ጽሁፍ (አማራጭ)...",
+  "strategy.autonomyCtx.placeholder": "ለራስ ገዝነት ተጨማሪ ነጻ ጽሁፍ (አማራጭ)...",
+  "strategy.competenceCtx.placeholder": "ለብቃት ተጨማሪ ነጻ ጽሁፍ (አማራጭ)...",
+  "info.group.emotional": "ስሜታዊ ተሳትፎ",
+  "info.group.cognitive": "አዕምሯዊ ተሳትፎ",
+  "info.group.behavioral": "ባህሪያዊ ተሳትፎ"
 };
 
 function getTargetLanguageName() {
@@ -3234,6 +3429,7 @@ function applyLanguage(lang) {
   renderReflections();
   renderStrategySummaries();
   renderRoutineChecks();
+  renderInfoChecks();
 }
 
 function changeLanguage(lang) {
@@ -3423,11 +3619,11 @@ function printElement(elementId) {
 // ── Rule-based Interpretation Generators (local, no AI) ──
 function generateInfoSummary() {
   const groups = {
-    belonging: ['emo1', 'emo2', 'beh1'],
-    autonomy: ['cog2', 'cog3', 'beh2'],
-    competence: ['emo3', 'cog1', 'beh3']
+    emotional: ['emo1', 'emo2', 'emo3', 'emo4', 'emo5'],
+    cognitive: ['cog1', 'cog2', 'cog3', 'cog4', 'cog5'],
+    behavioral: ['beh1', 'beh2', 'beh3', 'beh4', 'beh5']
   };
-  const allFields = ['emo1','emo2','emo3','emo4','cog1','cog2','cog3','beh1','beh2','beh3'];
+  const allFields = ['emo1','emo2','emo3','emo4','emo5','cog1','cog2','cog3','cog4','cog5','beh1','beh2','beh3','beh4','beh5'];
 
   const values = {};
   allFields.forEach(f => {
@@ -3462,22 +3658,20 @@ function generateInfoSummary() {
     return s;
   };
 
-  // Only compare dimensions that were rated IN FULL (all 3 items). A dimension
+  // Only compare dimensions that were rated IN FULL (all 5 items). A dimension
   // left partially or entirely unrated must never be treated as "low" —
   // it simply wasn't assessed, so it's excluded from the comparison below.
   let html = '';
   if (completeGroups.length > 0) {
     const allHigh = completeGroups.every(g => groupAverages[g] >= 4);
     const allEqual = completeGroups.length === 3 &&
-      Math.abs(groupAverages.belonging - groupAverages.autonomy) < 0.01 &&
-      Math.abs(groupAverages.autonomy - groupAverages.competence) < 0.01;
+      Math.abs(groupAverages.emotional - groupAverages.cognitive) < 0.01 &&
+      Math.abs(groupAverages.cognitive - groupAverages.behavioral) < 0.01;
     if (allHigh) html = buildSection('info.allGood', 2);
     else if (allEqual) html = buildSection('info.allEqual', 3);
     else {
       const lowestGroup = completeGroups.reduce((a, b) => groupAverages[a] <= groupAverages[b] ? a : b);
-      if (lowestGroup === 'belonging') html = buildSection('info.belonging', 3);
-      else if (lowestGroup === 'autonomy') html = buildSection('info.autonomy', 3);
-      else html = buildSection('info.competence', 3);
+      html = buildSection('info.' + lowestGroup, 3);
     }
   } else {
     html = `<p style="color:var(--text-muted); font-size:14px;">${escapeHtml(t('info.partialData'))}</p>`;
@@ -3489,9 +3683,9 @@ function generateInfoSummary() {
   }
 
   const fieldLabelKeys = {
-    emo1: 'scale.interest.label', emo2: 'scale.bodylang.label', emo3: 'scale.hope.label', emo4: 'scale.generalemotion.label',
-    cog1: 'scale.belief.label', cog2: 'scale.understanding.label', cog3: 'scale.questions.label',
-    beh1: 'scale.presence.label', beh2: 'scale.initiative.label', beh3: 'scale.homeimpl.label'
+    emo1: 'scale.interest.label', emo2: 'scale.bodylang.label', emo3: 'scale.hope.label', emo4: 'scale.emotion.label', emo5: 'scale.connection.label',
+    cog1: 'scale.belief.label', cog2: 'scale.understanding.label', cog3: 'scale.cogimpl.label', cog4: 'scale.communication.label', cog5: 'scale.expectations.label',
+    beh1: 'scale.presence.label', beh2: 'scale.initiative.label', beh3: 'scale.dialogue.label', beh4: 'scale.homeimpl.label', beh5: 'scale.behaviorfit.label'
   };
   const unratedLabels = allFields.filter(f => values[f] === undefined).map(f => t(fieldLabelKeys[f]));
   if (unratedLabels.length > 0) {
@@ -3509,6 +3703,108 @@ function generateInfoSummary() {
   const res = document.getElementById('res-info');
   res.classList.add('active');
   res.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// ── Parent Engagement Checks (local, no AI) ──────────
+const INFO_CHECKS_KEY = 'parentEngagement_infoChecks';
+
+function getInfoChecks() {
+  try {
+    return JSON.parse(localStorage.getItem(INFO_CHECKS_KEY)) || [];
+  } catch {
+    return [];
+  }
+}
+
+const INFO_GROUP_FIELDS = {
+  emotional: { emo1: 'scale.interest.label', emo2: 'scale.bodylang.label', emo3: 'scale.hope.label', emo4: 'scale.emotion.label', emo5: 'scale.connection.label' },
+  cognitive: { cog1: 'scale.belief.label', cog2: 'scale.understanding.label', cog3: 'scale.cogimpl.label', cog4: 'scale.communication.label', cog5: 'scale.expectations.label' },
+  behavioral: { beh1: 'scale.presence.label', beh2: 'scale.initiative.label', beh3: 'scale.dialogue.label', beh4: 'scale.homeimpl.label', beh5: 'scale.behaviorfit.label' }
+};
+const INFO_GROUP_LABEL_KEYS = { emotional: 'info.group.emotional', cognitive: 'info.group.cognitive', behavioral: 'info.group.behavioral' };
+
+function saveInfoCheck() {
+  const initial = document.getElementById('infoInitial').value.trim();
+
+  const ratings = {};
+  Object.keys(INFO_GROUP_FIELDS).forEach(g => {
+    const items = [];
+    Object.keys(INFO_GROUP_FIELDS[g]).forEach(f => {
+      const el = document.querySelector(`input[name="${f}"]:checked`);
+      if (el) items.push({ label: t(INFO_GROUP_FIELDS[g][f]), value: parseInt(el.value, 10) });
+    });
+    if (items.length > 0) ratings[g] = items;
+  });
+  const hasRatings = Object.keys(ratings).length > 0;
+
+  const ctxFields = [
+    { id: 'emoCtx', labelKey: 'acc.emotional.title' },
+    { id: 'cogCtx', labelKey: 'acc.cognitive.title' },
+    { id: 'behCtx', labelKey: 'acc.behavioral.title' },
+    { id: 'infoCtx', labelKey: 'field.additionalContext.label' }
+  ];
+  const notes = ctxFields
+    .map(cf => ({ label: t(cf.labelKey), value: document.getElementById(cf.id).value.trim() }))
+    .filter(n => n.value);
+
+  const analysis = document.getElementById('rc-info').innerText.trim();
+
+  const errorEl = document.getElementById('er-info-save');
+  if (!initial || (!hasRatings && notes.length === 0)) {
+    errorEl.style.display = 'block';
+    return;
+  }
+  errorEl.style.display = 'none';
+
+  const entry = { date: new Date().toISOString(), initial, ratings, notes, analysis };
+  const checks = getInfoChecks();
+  checks.unshift(entry);
+  localStorage.setItem(INFO_CHECKS_KEY, JSON.stringify(checks));
+
+  document.getElementById('infoInitial').value = '';
+  renderInfoChecks();
+}
+
+function deleteInfoCheck(index) {
+  const checks = getInfoChecks();
+  checks.splice(index, 1);
+  localStorage.setItem(INFO_CHECKS_KEY, JSON.stringify(checks));
+  renderInfoChecks();
+}
+
+function renderInfoChecks() {
+  const container = document.getElementById('past-info-checks');
+  if (!container) return;
+  const checks = getInfoChecks();
+  if (checks.length === 0) {
+    container.innerHTML = `<div style="color:var(--text-muted); font-size:13px; text-align:center;">${t('info.noChecks')}</div>`;
+    return;
+  }
+  container.innerHTML = checks.map((c, i) => {
+    const dateStr = new Date(c.date).toLocaleDateString('he-IL', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+    const ratingsHtml = c.ratings
+      ? Object.keys(INFO_GROUP_LABEL_KEYS).map(g => {
+          const items = c.ratings[g];
+          if (!items || !items.length) return '';
+          const line = items.map(r => `${escapeHtml(r.label)}: ${r.value}/5`).join(', ');
+          return `<div style="margin-top:6px; font-size:13px;"><strong style="font-size:12px; color:var(--primary);">${escapeHtml(t(INFO_GROUP_LABEL_KEYS[g]))}:</strong> ${line}</div>`;
+        }).join('')
+      : '';
+    const notesHtml = (c.notes && c.notes.length)
+      ? c.notes.map(n => `<div style="margin-top:6px; font-size:13px;"><strong style="font-size:12px; color:var(--primary);">${escapeHtml(n.label)}:</strong> ${escapeHtml(n.value)}</div>`).join('')
+      : '';
+    const analysisHtml = c.analysis
+      ? `<div style="margin-top:10px; padding-top:10px; border-top:1px dashed #e2e8f0; font-size:13px; white-space:pre-wrap;"><strong style="font-size:12px; color:var(--primary);">${escapeHtml(t('res.info.header'))}:</strong><br>${escapeHtml(c.analysis)}</div>`
+      : '';
+    return `
+      <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:var(--radius-sm); padding:14px; margin-bottom:10px; position:relative;">
+        <button onclick="deleteInfoCheck(${i})" style="position:absolute; top:10px; left:10px; background:none; border:none; color:var(--text-muted); cursor:pointer; font-size:14px;" title="${t('growth.deleteTitle')}">🗑️</button>
+        <div style="font-size:12px; color:var(--text-muted); font-weight:700;">${dateStr} — <strong>${escapeHtml(c.initial)}</strong></div>
+        ${ratingsHtml}
+        ${notesHtml}
+        ${analysisHtml}
+      </div>`;
+  }).join('');
 }
 
 // ── Home Implementation Check (local, no AI) ─────────
@@ -3693,9 +3989,13 @@ function saveStrategySummary() {
   const mode = getStrategyMode();
   const q1 = document.getElementById('stratQ1').value.trim();
   const q2 = document.getElementById('stratQ2').value.trim();
+  const initial = document.getElementById('stratInitial').value.trim();
+  const belongingCtx = document.getElementById('stratBelongingCtx').value.trim();
+  const autonomyCtx = document.getElementById('stratAutonomyCtx').value.trim();
+  const competenceCtx = document.getElementById('stratCompetenceCtx').value.trim();
 
   const errorEl = document.getElementById('strategy-error');
-  if (checked.length === 0 && !q1 && !q2) {
+  if (checked.length === 0 && !q1 && !q2 && !belongingCtx && !autonomyCtx && !competenceCtx) {
     errorEl.style.display = 'block';
     return;
   }
@@ -3705,20 +4005,26 @@ function saveStrategySummary() {
   const itemsHtml = checked.length
     ? `<strong>${escapeHtml(modeLabel)}</strong><ul style="padding-right:20px; margin-bottom:12px;">${checked.map(it => `<li>${escapeHtml(it)}</li>`).join('')}</ul>`
     : '';
+  const ctxHtml = [
+    belongingCtx ? `<strong>${escapeHtml(t('checklist.belonging.title'))}</strong><p style="margin-bottom:12px;">${escapeHtml(belongingCtx)}</p>` : '',
+    autonomyCtx ? `<strong>${escapeHtml(t('checklist.autonomy.title'))}</strong><p style="margin-bottom:12px;">${escapeHtml(autonomyCtx)}</p>` : '',
+    competenceCtx ? `<strong>${escapeHtml(t('checklist.competence.title'))}</strong><p style="margin-bottom:12px;">${escapeHtml(competenceCtx)}</p>` : ''
+  ].join('');
   const q1Html = q1 ? `<strong>${escapeHtml(t('field.stratQ1.label'))}</strong><p style="margin-bottom:12px;">${escapeHtml(q1)}</p>` : '';
   const q2Html = q2 ? `<strong>${escapeHtml(t('field.stratQ2.label'))}</strong><p>${escapeHtml(q2)}</p>` : '';
 
   const rc = document.getElementById('rc-strategies');
-  rc.innerHTML = itemsHtml + q1Html + q2Html;
+  rc.innerHTML = itemsHtml + ctxHtml + q1Html + q2Html;
   const res = document.getElementById('res-strategies');
   res.classList.add('active');
   res.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
-  const entry = { date: new Date().toISOString(), items: checked, mode, q1, q2 };
+  const entry = { date: new Date().toISOString(), items: checked, mode, q1, q2, initial, belongingCtx, autonomyCtx, competenceCtx };
   const summaries = getStrategySummaries();
   summaries.unshift(entry);
   localStorage.setItem(STRATEGY_SUMMARIES_KEY, JSON.stringify(summaries));
 
+  document.getElementById('stratInitial').value = '';
   renderStrategySummaries();
 }
 
@@ -3745,16 +4051,23 @@ function renderStrategySummaries() {
     const itemsHtml = s.items.length
       ? `<div style="margin-top:6px;"><strong style="font-size:12px; color:var(--primary);">${escapeHtml(modeLabel)}</strong><ul style="margin:4px 0 0; padding-right:18px; font-size:13px;">${s.items.map(it => `<li>${escapeHtml(it)}</li>`).join('')}</ul></div>`
       : '';
+    const ctxHtml = [
+      s.belongingCtx ? `<div style="margin-top:8px;"><strong style="font-size:12px; color:var(--primary);">${t('checklist.belonging.title')}</strong> <span style="font-size:13px;">${escapeHtml(s.belongingCtx)}</span></div>` : '',
+      s.autonomyCtx ? `<div style="margin-top:6px;"><strong style="font-size:12px; color:var(--primary);">${t('checklist.autonomy.title')}</strong> <span style="font-size:13px;">${escapeHtml(s.autonomyCtx)}</span></div>` : '',
+      s.competenceCtx ? `<div style="margin-top:6px;"><strong style="font-size:12px; color:var(--primary);">${t('checklist.competence.title')}</strong> <span style="font-size:13px;">${escapeHtml(s.competenceCtx)}</span></div>` : ''
+    ].join('');
     const qHtml = [
       s.q1 ? `<div style="margin-top:8px;"><strong style="font-size:12px; color:var(--primary);">${t('field.stratQ1.label')}</strong> <span style="font-size:13px;">${escapeHtml(s.q1)}</span></div>` : '',
       s.q2 ? `<div style="margin-top:6px;"><strong style="font-size:12px; color:var(--primary);">${t('field.stratQ2.label')}</strong> <span style="font-size:13px;">${escapeHtml(s.q2)}</span></div>` : ''
     ].join('');
+    const initialHtml = s.initial ? ` — <strong>${escapeHtml(s.initial)}</strong>` : '';
 
     return `
       <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:var(--radius-sm); padding:14px; margin-bottom:10px; position:relative;">
         <button onclick="deleteStrategySummary(${i})" style="position:absolute; top:10px; left:10px; background:none; border:none; color:var(--text-muted); cursor:pointer; font-size:14px;" title="${t('growth.deleteTitle')}">🗑️</button>
-        <div style="font-size:12px; color:var(--text-muted); font-weight:700;">${dateStr}</div>
+        <div style="font-size:12px; color:var(--text-muted); font-weight:700;">${dateStr}${initialHtml}</div>
         ${itemsHtml}
+        ${ctxHtml}
         ${qHtml}
       </div>`;
   }).join('');
